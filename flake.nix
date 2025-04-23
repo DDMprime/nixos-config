@@ -58,10 +58,10 @@
           # Основной профиль "desktop"
           desktop = mkConfig {
             environmentModule = ./modules/environments/desktop.nix;
-            hostModule        = ./nixos/hosts/desktop-host.nix;
-            configuration     = {
+            hostModule = ./nixos/hosts/desktop-host.nix;
+            configuration = {
               # по умолчанию: NVIDIA + стандартный rice
-              my.gpu          = "nvidia";
+              my.gpu = "nvidia";
               my.enableAltRice = false;
             };
           };
@@ -69,9 +69,9 @@
           # Альтернативный rice (тот же графический стек, но кастом‑rice)
           altRice = mkConfig {
             environmentModule = ./modules/environments/desktop.nix;
-            hostModule        = ./nixos/hosts/desktop-host.nix;
-            configuration     = {
-              my.gpu           = "nvidia";
+            hostModule = ./nixos/hosts/desktop-host.nix;
+            configuration = {
+              my.gpu = "nvidia";
               my.enableAltRice = true;
             };
           };
@@ -79,23 +79,23 @@
           # Профиль для AMD GPU
           amdProfile = mkConfig {
             environmentModule = ./modules/environments/desktop.nix;
-            hostModule        = ./nixos/hosts/desktop-host.nix;
-            configuration     = {
-              my.gpu           = "amd";
+            hostModule = ./nixos/hosts/desktop-host.nix;
+            configuration = {
+              my.gpu = "amd";
               my.enableAltRice = false;
             };
           };
 
           # Профиль для laptop (с дополнительными модулями: power management)
-          laptop = mkConfig {
-            environmentModule = ./modules/environments/laptop.nix;
-            hostModule        = ./nixos/hosts/laptop-host.nix;
-            configuration     = {
-              my.gpu           = "amd";
-              my.enableAltRice = false;
-            };
-          };
-        };
+#           laptop = mkConfig {
+#             environmentModule = ./modules/environments/laptop.nix;
+#             hostModule = ./nixos/hosts/laptop-host.nix;
+#             configuration = {
+#               my.gpu = "amd";
+#               my.enableAltRice = false;
+#             };
+#           };
+         };
 
         # Home‑Manager-конфигурация для пользователя "ddm"
         homeConfigurations = {
@@ -108,5 +108,5 @@
         };
 
         # Здесь можно добавить devShells, nixosTests, сборку ISO и т.д.
-      })
+      });
 }
