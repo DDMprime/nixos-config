@@ -1,23 +1,31 @@
-{ config, lib, ... }:
+{ config, lib,  ... }:
 
-lib.mkIf (config.my.gpu == "nvidia") {
-  services.xserver.videoDrivers = [ "nvidia" ];
+{
 
-  hardware = {
-    graphics = {
-      enable = true;
-      enable32Bit = true; # Для 32-битных приложений (Steam)
-    };
+  options = {
+    nvidia.enable =
+      lib.mkEnableOption "enables nvidia";
+  };
 
-    nvidia = {
-      open = false;
+  config = lib.mkIf config.nvidia.enable {
+    services.xserver.videoDrivers = [ "nvidia" ];
 
-      modesetting.enable = true; # Необходимо для Wayland
-      powerManagement.enable = true; # Управление питанием
+    hardware = {
+      graphics = {
+        enable = true;
+        enable32Bit = true; # Для 32-битных приложений (Steam)
+      };
 
-      package = config.boot.kernelPackages.nvidiaPackages.latest; # production - стабильная версия 550
-      forceFullCompositionPipeline = true;
-      nvidiaSettings = true; # Панель управления NVIDIA
+      nvidia = {
+        open = false;
+
+        modesetting.enable = true; # Необходимо для Wayland
+        powerManagement.enable = true; # Управление питанием
+
+        package = config.boot.kernelPackages.nvidiaPackages.latest; # production - стабильная версия 550
+        forceFullCompositionPipeline = true;
+        nvidiaSettings = true; # Панель управления NVIDIA
+      };
     };
   };
 }

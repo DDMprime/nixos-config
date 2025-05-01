@@ -1,0 +1,26 @@
+[
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 276,
+                "origin_hash": "c5daab79ed9f58991b0b721b454d76a2"
+            }
+        ],
+        "target_uinput": "mouse",
+        "output_symbol": "wheel(up, 20)",
+        "mapping_type": "key_macro"
+    },
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 275,
+                "origin_hash": "c5daab79ed9f58991b0b721b454d76a2"
+            }
+        ],
+        "target_uinput": "mouse",
+        "output_symbol": "wheel(down, 20)",
+        "mapping_type": "key_macro"
+    }
+]

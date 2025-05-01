@@ -1,0 +1,9 @@
+/home/ddm
+/mnt/hdd
+/mnt/ssd
+/mnt/hdd/note/Docs/
+/mnt/ssd/music/
+/mnt/ssd/Videos/
+/mnt/ssd/games/
+/home/ddm/Загрузки/
+/home/ddm/nixos-config

@@ -1,0 +1,26 @@
+[pyprland]
+plugins = [
+    "scratchpads"
+]
+
+[scratchpads.terminal]
+animation = "fromTop"
+command = "kitty --class kitty-dropterm"
+class = "kitty-dropterm"
+size = "75% 60%"
+
+[scratchpads.volume]
+animation = "fromRight"
+command = "GDK_BACKEND=x11 pwvucontrol"
+class = "com.saivert.pwvucontrol"
+size = "40% 90%"
+unfocus = "hide"
+lazy = true
+
+[scratchpads.network]
+animation = "fromRight"
+command = "nm-connection-editor"
+class = "nm-connection-editor"
+size = "40% 90%"
+unfocus = "hide"
+lazy = true

@@ -1,0 +1,36 @@
+* {
+	background-image: none;
+}
+window {
+	background-color: rgba(12, 12, 12, 0);
+}
+button {
+    color: #FFFFFF;
+	background-color: #0D0D14;
+	border-style: solid;
+	border-width: 2px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 25%;
+}
+
+button:active, button:hover {
+	background-color: #1f1f30;
+	border-color: #AC3232;
+	outline-style: none;
+}
+
+#lock {
+    background-image: image(url("icons/lock-solid.svg"), url("icons/lock-solid.svg"));
+}
+#shutdown {
+    background-image: image(url("icons/power-off-solid.svg"), url("icons/power-off-solid.svg"));
+}
+
+#suspend{
+	background-image: image(url("icons/moon-solid.svg"), url("icons/moon-solid.svg"));
+}
+
+#reboot {
+    background-image: image(url("icons/rotate-right-solid.svg"), url("icons/rotate-right-solid.svg"));
+}
