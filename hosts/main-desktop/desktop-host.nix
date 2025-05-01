@@ -3,14 +3,13 @@
 {
   # Импорт hardware-configuration
   imports = [
-      ./hardware-configuration.
+      ./hardware-configuration.nix
       ./mount_disks.nix
       ./../../modules/bundle.nix
   ];
   #включаемые модули
   hyprland.enable = true;
   zsh.enable = true;
-  amdgpu.enable = false;
   nvidia.enable = true;
   input_remapper.enable = true;
   steam.enable = true;
