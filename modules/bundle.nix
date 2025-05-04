@@ -7,7 +7,8 @@
     ./services/autorun_input_remapper.nix
     ./services/pipewire.nix
     ./services/steam.nix
-    ./services/vpn.nix
+    ./services/zerotier.nix
+    ./services/tailscale.nix
     ./services/zapret.nix
   ];
 

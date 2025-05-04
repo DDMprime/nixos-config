@@ -14,6 +14,7 @@
   input_remapper.enable = true;
   steam.enable = true;
   zerotier.enable = true;
+  tailscale.enable = true;
   zapret.enable = true;
 
   #имя хоста и локали

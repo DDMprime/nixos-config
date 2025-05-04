@@ -21,6 +21,7 @@
     kdePackages.kate # редактор кода kate
     qview # для просмотра изображений
     kdePackages.elisa # аудиоплеер
+    firefox # браузер
     freetube
     retroshare
 
