@@ -7,17 +7,20 @@
   };
 
   config = lib.mkIf config.tailscale.enable {
-    # Включение сервиса Tailscale
     services.tailscale.enable = true;
 
-    # Укажите ключ аутентификации (рекомендуется использовать безопасное хранилище для секретов)
-    services.tailscale.authKey = "ngHZ4iWuqw11CNTRL"; # Замените на ваш ключ
+    services.tailscale.openFirewall = true;
+      networking.nftables.enable = true;
 
-    # Настройка firewall (обычно не требуется, сервис делает это автоматически)
-    networking.firewall = {
-        checkReversePath = "loose"; # Важно для работы Tailscale
-        trustedInterfaces = [ "tailscale0" ];
-    };
+      networking.nftables.ruleset = ''
+        table inet filter {
+          chain output {
+            type filter hook output priority 0;
+            ip daddr 95.217.2.165 tcp dport 443 accept
+            ip daddr 34.117.59.81 tcp dport 443 accept  # пример IP controlplane.tailscale.com
+          }
+        }
+      '';
 
   };
 }
