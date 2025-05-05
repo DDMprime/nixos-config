@@ -24,6 +24,9 @@
 
         shellAliases = {
         g = "git";
+        gs = "git status";
+        gp = "git push";
+        gl = "git log";
         sl = "ls";
         #tm = "tmux";
         l = "ls -l";

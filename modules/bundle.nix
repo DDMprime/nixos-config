@@ -10,6 +10,7 @@
     ./services/zerotier.nix
     ./services/tailscale.nix
     ./services/zapret.nix
+    ./services/remote_access.nix
   ];
 
 }

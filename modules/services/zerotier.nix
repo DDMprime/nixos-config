@@ -15,7 +15,6 @@
     };
     networking.firewall = {
         trustedInterfaces = [ "zt*" ];  # Разрешить весь трафик ZeroTier
-        allowedTCPPorts = [ 25565 ];    # Порт Minecraft
     };
   };
 }
