@@ -87,9 +87,9 @@
 
     # WM stuff
     hyprland # основная wm
-    xdg-desktop-portal-hyprland # xdg портал для hyprland
-    xdg-desktop-portal-gtk # xdg портал gtk
-    xdg-desktop-portal # управление окружением
+    xdg-desktop-portal
+    xdg-desktop-portal-hyprland
+    xdg-desktop-portal-gtk
     waybar # панель задач
     #kitty # терминал по умолчанию в hyprland
     #dunst # демон уведомлений по умолчанию в hyprland
