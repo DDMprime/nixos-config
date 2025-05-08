@@ -11,6 +11,7 @@
     ./services/tailscale.nix
     ./services/zapret.nix
     ./services/remote_access.nix
+    ./services/rustdesk.nix
   ];
 
 }
