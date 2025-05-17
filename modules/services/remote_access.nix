@@ -22,5 +22,9 @@
     networking.firewall.interfaces."zt+" = {
       allowedTCPPorts = [ 22 ];
     };
+    services.plex = {
+      enable = true;
+      openFirewall = true;
+    };
   };
 }
