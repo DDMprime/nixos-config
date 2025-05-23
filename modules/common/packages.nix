@@ -6,7 +6,6 @@
     telegram-desktop
     discord
     spotify
-    skypeforlinux
     qbittorrent # торрент-клиент
     mpv # видео-плеер
     libreoffice-qt6-fresh
