@@ -16,7 +16,7 @@
   zerotier.enable = true;
   tailscale.enable = false;
   zapret.enable = true;
-  ssh.enable = true;
+  ssh.enable = false;
 
   #имя хоста и локали
   networking = {

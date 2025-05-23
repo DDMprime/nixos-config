@@ -64,6 +64,7 @@
     eza # для статистики (улучшенный ls)
     #jre8 # для tlauncher'а
     jdk17 # для сервера
+    plex
     logmein-hamachi
 
     # Sound
