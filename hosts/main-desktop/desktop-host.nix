@@ -15,7 +15,7 @@
   steam.enable = true;
   zerotier.enable = true;
   tailscale.enable = false;
-  zapret.enable = true;
+  zapret.enable = false;
   ssh.enable = false;
 
   #имя хоста и локали

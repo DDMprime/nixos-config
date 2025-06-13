@@ -3,11 +3,21 @@
 {
   environment.systemPackages = with pkgs; [
     # Desktop apps
+    (google-chrome.override {
+      commandLineArgs = [
+        "--enable-features=AcceleratedVideoEncoder,VaapiOnNvidiaGPUs,VaapiIgnoreDriverChecks,Vulkan,DefaultANGLEVulkan,VulkanFromANGLE"
+        "--enable-features=VaapiIgnoreDriverChecks,VaapiVideoDecoder,PlatformHEVCDecoderSupport"
+        "--enable-features=UseMultiPlaneFormatForHardwareVideo"
+        "--ignore-gpu-blocklist"
+        "--enable-zero-copy"
+        "--ozone-platform=wayland"
+      ];
+    })
     telegram-desktop
     discord
     spotify
     qbittorrent # торрент-клиент
-    mpv # видео-плеер
+    stable.mpv # видео-плеер
     libreoffice-qt6-fresh
     tor-browser
     input-remapper # для биндов
@@ -23,6 +33,7 @@
     firefox # браузер
     freetube
     retroshare
+    rare # epic games GUI
 
     # Coding stuff
     gnumake # для сборки
@@ -34,6 +45,7 @@
     # Network managment
     curl
     ipset
+    zapret
     iptables # для zapret'а
     nftables # для zapret'а
 
@@ -106,6 +118,7 @@
     xfce.thunar # файловый менеджер
     zsh # zsh оболочка для терминала
     zsh-syntax-highlighting
+    playerctl # отображение звука на waybar
 
     # Настройки GTK/QT
     libsForQt5.qt5ct # настройка qt5ct
