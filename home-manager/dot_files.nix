@@ -10,7 +10,7 @@
     recursive = true;
   };
   home.file.".config/kitty" = {
-    source = ./dotfiles/MangoHUD;
+    source = ./dotfiles/kitty;
     recursive = true;
   };
   home.file.".config/waybar" = {
@@ -38,7 +38,7 @@
     recursive = true;
   };
   home.file.".config/rofi" = {
-    source = ./dotfiles/wofi;
+    source = ./dotfiles/rofi;
     recursive = true;
   };
   #home.file.".config/alacritty" = {

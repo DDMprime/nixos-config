@@ -1,0 +1,12 @@
+× zapret.service - DPI bypass service
+     Loaded: loaded (/etc/systemd/system/zapret.service; enabled; preset: ignored)
+     Active: failed (Result: exit-code) since Sat 2025-06-14 17:54:59 +05; 1min 24s ago
+   Duration: 55ms
+ Invocation: a53c884640ec43e0a41e2088790a2565
+    Process: 123140 ExecStart=/nix/store/ghyhg3163wbaakm7m65860pp1qd6jp5a-zapret-70.6/bin/nfqws --pidfile=/run/nfqws.pid --filter-tcp=80 --hostlist=/home/ddm/nixos-config/modules/services/lists/list-ultimate.txt --dpi-desync=fake,split2 --dpi-desync-autottl=2 --dpi-desync-fooling=md5sig --new --qnum=200 (code=exited, status=1/FAILURE)
+   Main PID: 123140 (code=exited, status=1/FAILURE)
+
+июн 14 17:54:59 nixos systemd[1]: zapret.service: Scheduled restart job, restart counter is at 5.
+июн 14 17:54:59 nixos systemd[1]: zapret.service: Start request repeated too quickly.
+июн 14 17:54:59 nixos systemd[1]: zapret.service: Failed with result 'exit-code'.
+июн 14 17:54:59 nixos systemd[1]: Failed to start DPI bypass service.
