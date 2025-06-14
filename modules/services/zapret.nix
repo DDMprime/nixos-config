@@ -34,6 +34,9 @@
         "ytimg.com"
         "youtu.be"
         "discord.com"
+        "nordtheme.com"
+        "search.nixos.org"
+        "wiki.hypr.land"
       ];
       params = [
         "--filter-udp=443 --dpi-desync=fake --dpi-desync-repeats=6 --new"

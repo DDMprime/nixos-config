@@ -9,7 +9,7 @@
     source = ./dotfiles/kate;
     recursive = true;
   };
-  home.file.".config/MangoHUD" = {
+  home.file.".config/kitty" = {
     source = ./dotfiles/MangoHUD;
     recursive = true;
   };
@@ -37,14 +37,14 @@
     source = ./dotfiles/cava;
     recursive = true;
   };
-  home.file.".config/wofi" = {
+  home.file.".config/rofi" = {
     source = ./dotfiles/wofi;
     recursive = true;
   };
-  home.file.".config/alacritty" = {
-    source = ./dotfiles/alacritty;
-    recursive = true;
-  };
+  #home.file.".config/alacritty" = {
+    #source = ./dotfiles/alacritty;
+    #recursive = true;
+  #};
   home.file.".config/fzf_dirs.txt" = {
     source = ./dotfiles/fzf_dirs.txt;
     recursive = true;

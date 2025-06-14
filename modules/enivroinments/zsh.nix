@@ -1,4 +1,4 @@
-{ lib, config, ... }:
+{ lib, config, pkgs, ... }:
 
 {
 
@@ -73,11 +73,12 @@
 
 
 
-      size = "du -achd 1 2>/dev/null | sort -hr | awk 'NR>1' | fzf --height 80% --reverse --preview 'echo {} | cut -f2 | xargs exa -lha --git --icons --group-directories-first' | cut -f2 | xargs realpath";
-      nixreb = "sudo nixos-rebuild switch --flake .";
-      o = ''selected=$(find . -maxdepth 1 -mindepth 1 -printf '%P\n' | awk '/^\..*/ {print "2" $0; next} {print "1" $0}' | sort -k1,1n -k2,2 | cut -c2- | fzf --preview 'if [ -d {} ]; then ls --color=auto {}; else bat --color=always --style=numbers {} 2>/dev/null || cat {}; fi') && if [[ -d "$selected" ]]; then cd "$selected" && echo "Переход в: $selected"; else xdg-open "$selected" &>/dev/null; fi'';
-
+        size = "du -achd 1 2>/dev/null | sort -hr | awk 'NR>1' | fzf --height 80% --reverse --preview 'echo {} | cut -f2 | xargs exa -lha --git --icons --group-directories-first' | cut -f2 | xargs realpath";
+        nixreb = "sudo nixos-rebuild switch --flake .";
+        o = ''selected=$(find . -maxdepth 1 -mindepth 1 -printf '%P\n' | awk '/^\..*/ {print "2" $0; next} {print "1" $0}' | sort -k1,1n -k2,2 | cut -c2- | fzf --preview 'if [ -d {} ]; then ls --color=auto {}; else bat --color=always --style=numbers {} 2>/dev/null || cat {}; fi') && if [[ -d "$selected" ]]; then cd "$selected" && echo "Переход в: $selected"; else xdg-open "$selected" &>/dev/null; fi'';
       };
+
     };
+    users.defaultUserShell = pkgs.zsh;
   };
 }
