@@ -17,6 +17,7 @@
   tailscale.enable = false;
   zapret.enable = true;
   ssh.enable = false;
+  i2p.enable = true;
 
   #имя хоста и локали
   networking = {

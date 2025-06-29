@@ -9,7 +9,7 @@
 
   config = lib.mkIf config.zapret.enable (
     let
-      LIST_PATH = "/zapret/lists/list-ultimate.txt";
+      LIST_PATH = "/zapret/lists/list-zapret.txt";
       DISCORD_IPSET_PATH = "/zapret/lists/ipset-discord.txt";
       CLOUDFLARE_IPSET_PATH = "/zapret/lists/ipset-cloudflare.txt";
     in {

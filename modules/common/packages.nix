@@ -33,10 +33,14 @@
     firefox # браузер
     freetube
     retroshare
+    audacity # редактирование аудио
     rare # epic games GUI
+    gimp # для создания изображений и их редактирования
+    inkscape # для создания векторного видео
 
     # Coding stuff
     gnumake # для сборки
+    cmake
     gcc # компилятор
     stable.python313 # стабильная версия python'а
     stable.python313Packages.pip
@@ -52,6 +56,7 @@
 
     # CLI utils
     wget
+    gowall # работа с обоями
     grim # для более подробной настройки создания скриншотов
     slurp # для получения области на экране (в комбинации с grim - выбор области для скрина)
     wl-clipboard # для работы с буфером обмена в wayland
@@ -61,6 +66,7 @@
     zip # архиватор zip
     unzip # для разархивирования zip
     unrar # для разархивирования rar
+    cryptsetup # ???
     p7zip # архиватор 7z
     fastfetch # cli приложение для отображения информации о системе
     tree # красивое отображение дерева директорий
