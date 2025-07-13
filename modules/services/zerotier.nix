@@ -11,10 +11,12 @@
 
     services.zerotierone = {
         enable = true;
-        joinNetworks = [ "a0cbf4b62a02d645" ]; # ID сети zerotier
+        joinNetworks = [ "363c67c55aec434b" ]; # ID сети zerotier
     };
     networking.firewall = {
         trustedInterfaces = [ "zt*" ];  # Разрешить весь трафик ZeroTier
+        allowedTCPPorts = [ 25565 ];
+        allowedUDPPorts = [9993];  # Порт ZeroTier
     };
   };
 }

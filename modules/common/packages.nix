@@ -31,12 +31,16 @@
     qview # для просмотра изображений
     kdePackages.elisa # аудиоплеер
     firefox # браузер
-    freetube
+    freetube # ютуб
     retroshare
     audacity # редактирование аудио
     rare # epic games GUI
     gimp # для создания изображений и их редактирования
     inkscape # для создания векторного видео
+    easyeffects # смена голоса
+    keepassxc
+    xarchiver # универсальный архиватор
+    anki # учить слова на английском
 
     # Coding stuff
     gnumake # для сборки
@@ -66,7 +70,7 @@
     zip # архиватор zip
     unzip # для разархивирования zip
     unrar # для разархивирования rar
-    cryptsetup # ???
+    cryptsetup
     p7zip # архиватор 7z
     fastfetch # cli приложение для отображения информации о системе
     tree # красивое отображение дерева директорий
@@ -80,9 +84,9 @@
     fzf # для отображения и работы с директориями в терминале
     eza # для статистики (улучшенный ls)
     #jre8 # для tlauncher'а
-    jdk17 # для сервера
+    jdk8 # для сервера
     plex
-    logmein-hamachi
+    i2pd
 
     # Sound
     pipewire # взаимодействие с настройками звука сторонними приложениями

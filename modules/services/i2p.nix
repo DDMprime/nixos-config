@@ -8,31 +8,46 @@
 
 
   config = lib.mkIf config.i2p.enable {
-    services.i2pd = {
-        enable = true;
+        services.i2pd = {
+            enable = true;
+            dataDir = "/var/lib/i2pd";
+            logLevel = "debug";
+            # Серверный тунель для входящих соединений
+            inTunnels.retroshare = {
+                enable = true;
+                keys = "retroshare.dat";
+                address = "127.0.0.1";
+                port = 12346;
+                destination = "server";
+                inbound.quantity = 1;
+                inbound.length = 3;
+                outbound.quantity = 1;
+                outbound.length = 3;
+            };
+            # Клиентский тунель для исходящих соединений
+            proto.socksProxy = {
+                enable = true;
+                address = "127.0.0.1";
+                port = 4447;
+#                 outproxyEnable = true;  # Выход в клирнет через аутпрокси
+#                 outproxy = "proxy.eepb.i2p";  # Аутпрокси по умолчанию
+#                 outproxyPort = 4444;     # Порт аутпрокси
+            };
 
-        # Включить SAM протокол для RetroShare
-        proto.sam.enable = true;
-        proto.sam.port = 7656;
-        proto.sam.address = "127.0.0.1";
+#             proto.httpProxy = {
+#                 enable = true;
+#                 address = "127.0.0.1";
+#                 port = 4444;
+#             };
 
-        # Включить web-интерфейс для отладки
-        proto.http.enable = true;
-        proto.http.port = 7070;
-        proto.http.address = "127.0.0.1";
+            proto.http = {
+                enable = true;
+                address = "127.0.0.1";
+                port = 7070;
+                auth = false;
+                strictHeaders = false;
+            };
 
-        # Включить UPnP для входящих соединений (если за NAT)
-        upnp.enable = true;
-
-        # Ресид сервера (если нет свежей базы)
-        reseed.urls = [
-        "https://reseed.i2p-projekt.de/"
-        "https://i2p.mooo.com/netDb/"
-        ];
-
-        # Открыть firewall для нужных портов (если надо)
-        openFirewall = true;
-
+        };
     };
-  };
 }
