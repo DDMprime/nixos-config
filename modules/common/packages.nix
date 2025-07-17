@@ -41,6 +41,7 @@
     keepassxc
     xarchiver # универсальный архиватор
     anki # учить слова на английском
+    librewolf # firefox с вырезанной телеметрией и встроенной защитой
 
     # Coding stuff
     gnumake # для сборки
