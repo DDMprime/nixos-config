@@ -14,10 +14,11 @@
   input_remapper.enable = true;
   steam.enable = true;
   zerotier.enable = true;
-  tailscale.enable = false;
+  tailscale.enable = true;
   zapret.enable = true;
   ssh.enable = false;
   i2p.enable = true;
+  samba.enable = false;
 
   #имя хоста и локали
   networking = {

@@ -57,6 +57,7 @@
     zapret
     iptables # для zapret'а
     nftables # для zapret'а
+    proxychains # для управления прокси
 
 
     # CLI utils
