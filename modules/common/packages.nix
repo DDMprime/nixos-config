@@ -42,6 +42,7 @@
     xarchiver # универсальный архиватор
     anki # учить слова на английском
     librewolf # firefox с вырезанной телеметрией и встроенной защитой
+    hexchat
 
     # Coding stuff
     gnumake # для сборки
@@ -110,14 +111,16 @@
     cudaPackages.cudnn # для работы CUDA
 
     # WM stuff
-    hyprland # основная wm
+    hyprland # окружение
+    niri # окружение
+    xwayland-satelite # xwayland для niri
     xdg-desktop-portal
     xdg-desktop-portal-hyprland
     xdg-desktop-portal-gtk
     waybar # панель задач
     kitty # терминал по умолчанию в hyprland
     #dunst # демон уведомлений по умолчанию в hyprland
-    #alacritty # прошлый терминал, конфиг под milk рис
+    alacritty # прошлый терминал, конфиг под milk рис
     hyprland-qt-support # для приложений, использующих qt6
     hyprpaper # обои в hyprland
     hyprlock # экран блокировки hyprland

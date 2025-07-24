@@ -9,6 +9,7 @@
   ];
   #включаемые модули
   hyprland.enable = true;
+  niri.enable = false;
   zsh.enable = true;
   nvidia.enable = true;
   input_remapper.enable = true;
@@ -56,6 +57,9 @@
   # Автоматический вход (можно выключить для безопасности)
   services.displayManager.autoLogin.enable = true;
   services.displayManager.autoLogin.user = "ddm";
+
+  services.logind.killUserProcesses = true; # Завершение всех пользовательских процессов при выключении
+  systemd.coredump.enable = false;
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;

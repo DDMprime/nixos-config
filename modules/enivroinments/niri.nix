@@ -2,12 +2,12 @@
 
 {
   options = {
-    hyprland.enable =
-      lib.mkEnableOption "enables hyprland";
+    niri.enable =
+      lib.mkEnableOption "enables niri";
   };
 
 
-  config = lib.mkIf config.hyprland.enable {
+  config = lib.mkIf config.niri.enable {
 
     services.xserver.enable = true;
     # Enable the Hyprland Desktop Environment
@@ -30,9 +30,6 @@
       NIXOS_OZONE_WL = "1"; # Для Wayland-совместимых приложений
     };
 
-    programs.hyprland = {
-      enable = true;
-      xwayland.enable = true; # Для X11-приложений
-    };
+    programs.niri.enable = true; # Включение niri
   };
 }

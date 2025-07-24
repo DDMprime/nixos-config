@@ -3,6 +3,7 @@
     ./common/packages.nix
     ./common/steam.nix
     ./enivroinments/hyprland.nix
+    ./enivroinments/niri.nix
     ./enivroinments/zsh.nix
     ./hardware/nvidia-gpu.nix
     ./services/autorun_input_remapper.nix

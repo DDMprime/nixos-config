@@ -6,7 +6,7 @@
  font-size: 13pt;
  font-style: normal;
  min-height: 0;
- /*color: white;*/
+ color: white;
  }
 
  window#waybar {
@@ -252,7 +252,7 @@
 
  #cpu {
  background-color: #282828;
- /*color: #FABD2D;*/
+ color: white;
  border-radius: 16px;
  margin: 5px;
  margin-left: 5px;
