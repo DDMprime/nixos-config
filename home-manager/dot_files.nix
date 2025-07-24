@@ -5,6 +5,10 @@
     source = ./dotfiles/hypr;
     recursive = true;
   };
+  home.file.".config/niri" = {
+    source = ./dotfiles/niri;
+    recursive = true;
+  };
   home.file.".config/kate" = {
     source = ./dotfiles/kate;
     recursive = true;

@@ -113,7 +113,7 @@
     # WM stuff
     hyprland # окружение
     niri # окружение
-    xwayland-satelite # xwayland для niri
+    xwayland-satellite # xwayland для niri
     xdg-desktop-portal
     xdg-desktop-portal-hyprland
     xdg-desktop-portal-gtk
