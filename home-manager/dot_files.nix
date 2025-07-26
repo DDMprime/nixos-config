@@ -70,6 +70,19 @@
         source = ./dotfiles/niri;
         recursive = true;
       };
+      home.file.".config/waybar" = {
+        source = ./dotfiles/waybar-niri-nord;
+        recursive = true;
+      };
+      home.file.".config/tofi-nord" = {
+        source = ./dotfiles/tofi-nord;
+        recursive = true;
+      };
+      home.file.".config/kitty" = {
+        source = ./dotfiles/kitty-nord-v2;
+        recursive = true;
+      };
+
 
     })
   ];

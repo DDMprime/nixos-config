@@ -10,12 +10,12 @@
       xdg-desktop-portal-gtk
       xdg-desktop-portal-gnome
       waybar # панель задач
-      kitty # терминал по умолчанию в hyprland
+      kitty # терминал
       mako # демон уведомлений
       alacritty # терминал
-      swww # обои
-      hyprlock # экран блокировки hyprland
-      hyprshot # инструмент для создания скриншотов в hyprland
+      mpvpapper # анимированные обои
+      hyprlock # экран блокировки wayland
+      hyprshot # инструмент для создания скриншотов wayland
       tofi # меню приложений
       #pulseaudio # для расширенной настройки звука
       wlogout # меню выхода/перезагрузки/блокировки/сна

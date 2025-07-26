@@ -27,12 +27,15 @@
             ];
           })
           ./hosts/main-desktop/desktop-host.nix
+          inputs.home-manager.nixosModules.home-manager
         ];
       };
 
+
+      /*
       homeConfigurations.ddm = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.${system};
         modules = [ ./hosts/main-desktop/home.nix ];
-      };
+      };*/
     };
 }

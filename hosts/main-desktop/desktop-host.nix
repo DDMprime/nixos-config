@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   # Импорт hardware-configuration
@@ -6,10 +6,11 @@
       ./hardware-configuration.nix
       ./mount_disks.nix
       ./../../modules/bundle.nix
+      inputs.home-manager.nixosModules.home-manager
   ];
   #включаемые модули
-  hyprland.enable = true;
-  niri.enable = false;
+  hyprland.enable = false;
+  niri.enable = true;
   zsh.enable = true;
   nvidia.enable = true;
   input_remapper.enable = true;
@@ -43,8 +44,7 @@
     LC_TIME = "ru_RU.UTF-8";
   };
 
-  # Включаем SSH для управления
-  #services.openssh.enable = true;
+  home-manager.users."ddm" = import ./home.nix;
 
   # Пользователь
   users.users.ddm = {
