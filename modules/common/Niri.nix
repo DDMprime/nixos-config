@@ -1,13 +1,7 @@
 { pkgs, config, lib, ... }:
 
 {
-  options = {
-    NiriStuff.enable =
-      lib.mkEnableOption "download packages for niri";
-  };
-
-
-  config = lib.mkIf config.HyprlandStuff.enable {
+  config = lib.mkIf config.niri.enable {
     environment.systemPackages = with pkgs; [
       # WM stuff
       niri # окружение

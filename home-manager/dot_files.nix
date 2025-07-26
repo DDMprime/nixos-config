@@ -1,64 +1,76 @@
-{
-  home.file.".zshrc".text = "# Конфигурация управляется NixOS";
+{ config, lib, ... }:
 
-  home.file.".config/hypr" = {
-    source = ./dotfiles/hypr;
-    recursive = true;
+{
+  options = {
+    hyprland.enable = lib.mkEnableOption "Enable Hyprland config";
+    niri.enable = lib.mkEnableOption "Enable Niri config";
   };
-  home.file.".config/niri" = {
-    source = ./dotfiles/niri;
-    recursive = true;
-  };
-  home.file.".config/kate" = {
-    source = ./dotfiles/kate;
-    recursive = true;
-  };
-  home.file.".config/kitty" = {
-    source = ./dotfiles/kitty;
-    recursive = true;
-  };
-  home.file.".config/waybar" = {
-    source = ./dotfiles/waybar;
-    recursive = true;
-  };
-  #home.file.".config/input-remapper-2" = {
-    #source = ./dotfiles/input-remapper-2;
-    #recursive = true;
-  #};
-  home.file.".config/wlogout" = {
-    source = ./dotfiles/wlogout;
-    recursive = true;
-  };
-  home.file.".config/swaync" = {
-    source = ./dotfiles/swaync;
-    recursive = true;
-  };
-  home.file.".config/btop" = {
-    source = ./dotfiles/btop;
-    recursive = true;
-  };
-  home.file.".config/cava" = {
-    source = ./dotfiles/cava;
-    recursive = true;
-  };
-  home.file.".config/rofi" = {
-    source = ./dotfiles/rofi;
-    recursive = true;
-  };
-  #home.file.".config/alacritty" = {
-    #source = ./dotfiles/alacritty;
-    #recursive = true;
-  #};
-  home.file.".config/fzf_dirs.txt" = {
-    source = ./dotfiles/fzf_dirs.txt;
-    recursive = true;
-  };
-  home.file.".config/test.txt" = {
-    source = ./dotfiles/test1.txt;
-    recursive = true;
-  };
-  #home.file.".config/Thunar" = {
-    #source = ./dotfiles/Thunar;
-    #recursive = true;
-  #};
+
+  config = lib.mkMerge [
+    #Other
+    {
+      home.file.".zshrc".text = "# Конфигурация управляется NixOS";
+
+      home.file.".config/kate" = {
+        source = ./dotfiles/kate;
+        recursive = true;
+      };
+
+      home.file.".config/fzf_dirs.txt" = {
+        source = ./dotfiles/fzf_dirs.txt;
+        recursive = true;
+      };
+    }
+
+    #Hyprland
+    (lib.mkIf config.hyprland.enable {
+      home.file.".config/hypr" = {
+        source = ./dotfiles/hypr-nord;
+        recursive = true;
+      };
+
+      home.file.".config/waybar" = {
+        source = ./dotfiles/waybar-hypr-nord;
+        recursive = true;
+      };
+
+      home.file.".config/wlogout" = {
+        source = ./dotfiles/wlogout-nord;
+        recursive = true;
+      };
+
+      home.file.".config/swaync" = {
+        source = ./dotfiles/swaync-hypr-nord;
+        recursive = true;
+      };
+
+      home.file.".config/rofi" = {
+        source = ./dotfiles/rofi-hypr-nord;
+        recursive = true;
+      };
+
+      home.file.".config/kitty" = {
+        source = ./dotfiles/kitty-nord;
+        recursive = true;
+      };
+      home.file.".config/btop" = {
+        source = ./dotfiles/btop-nord;
+        recursive = true;
+      };
+
+      home.file.".config/cava" = {
+        source = ./dotfiles/cava-nord;
+        recursive = true;
+      };
+    })
+
+    #Niri
+    (lib.mkIf config.niri.enable {
+      home.file.".config/niri" = {
+        source = ./dotfiles/niri;
+        recursive = true;
+      };
+
+    })
+  ];
 }

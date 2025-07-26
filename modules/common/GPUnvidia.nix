@@ -1,13 +1,7 @@
 { pkgs, config, lib, ... }:
 
 {
-  options = {
-    NvidiaStuff.enable =
-      lib.mkEnableOption "download gpu stuff for nvidia";
-  };
-
-
-  config = lib.mkIf config.NvidiaStuff.enable {
+  config = lib.mkIf config.nvidia.enable {
     environment.systemPackages = with pkgs; [
       # GPU stuff
       nvidia-vaapi-driver # vaapi ускорение

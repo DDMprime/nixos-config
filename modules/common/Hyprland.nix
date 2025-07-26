@@ -1,13 +1,7 @@
 { pkgs, config, lib, ... }:
 
 {
-  options = {
-    HyprlandStuff.enable =
-      lib.mkEnableOption "download packages for hyprland";
-  };
-
-
-  config = lib.mkIf config.HyprlandStuff.enable {
+  config = lib.mkIf config.hyprland.enable {
     environment.systemPackages = with pkgs; [
       # WM stuff
       hyprland # окружение

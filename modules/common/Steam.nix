@@ -2,12 +2,12 @@
 
 {
   options = {
-    Steam.enable =
+    steam.enable =
       lib.mkEnableOption "enables steam";
   };
 
 
-  config = lib.mkIf config.Steam.enable {
+  config = lib.mkIf config.steam.enable {
     environment.systemPackages = with pkgs; [ steam ];
 
     programs.steam = {
