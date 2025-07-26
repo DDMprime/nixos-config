@@ -13,13 +13,17 @@
   zsh.enable = true;
   nvidia.enable = true;
   input_remapper.enable = true;
-  steam.enable = true;
   zerotier.enable = true;
   tailscale.enable = true;
   zapret.enable = true;
   ssh.enable = false;
   i2p.enable = true;
   samba.enable = false;
+
+  Steam.enable = true;
+  NvidiaStuff.enable = true;
+  HyprlandStuff.enable = true;
+  NiriStuff.enable = false;
 
   #имя хоста и локали
   networking = {

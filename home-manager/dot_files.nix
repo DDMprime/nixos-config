@@ -53,6 +53,10 @@
     source = ./dotfiles/fzf_dirs.txt;
     recursive = true;
   };
+  home.file.".config/test.txt" = {
+    source = ./dotfiles/test1.txt;
+    recursive = true;
+  };
   #home.file.".config/Thunar" = {
     #source = ./dotfiles/Thunar;
     #recursive = true;
