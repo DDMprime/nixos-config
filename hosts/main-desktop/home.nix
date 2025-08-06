@@ -9,6 +9,6 @@
     stateVersion = "25.05";
   };
 
-  niri.enable = true;
-  hyprland.enable = false;
+  niri.enable = false;
+  hyprland.enable = true;
 }

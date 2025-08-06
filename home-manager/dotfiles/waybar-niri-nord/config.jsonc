@@ -1,37 +1,24 @@
 
 {
   "layer": "top",
-  "position": "top",
+  "position": "bottom",
   "height": 0,
   "spacing": 0,
-  "margin-top": 12,
-  "margin-bottom": 5,
-  "margin-left": 200,
-  "margin-right": 200,
+  "exclusive-zone": true,
+  "fixed": true,
+  "docked": true,
     "modules-left": ["niri/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": [ "tray","backlight", "pulseaudio", "battery"],
+    "modules-right": [ "tray", "pulseaudio"],
     "sway/scratchpad": {
       "format": "󱂬 {count}"
     },
     "pulseaudio": {
     	"format": "{volume}%"
     },
-    "backlight": {
-    "format": "{percent}%",
-    "format-icons": ["", "", "", "", "", "", "", "", ""],
   },
     "niri/workspaces": {
       "format": "{index}"
-    },
-    "mpris": {
-    	"format": "{status_icon} {artist} - {title}",
-    	"format-stopped": "",
-    	"status-icons": {
-    		"paused": "⏸",
-    		"playing": "󰐊"
-    	},
-    	"interval": "0.1"
     },
     "clock": {
       "format": "{:%I:%M %p}",
@@ -41,24 +28,4 @@
     "tray": {
     	"spacing": 12
     },
-    "gamemode": {
-        "glyph": "   ",
-        "format": "{glyph}",
-        "use-icon": false,
-        "icon-spacing": 16
-    },
-    "memory": {
-        "format": "  {percentage}%",
-        "interval": 1
-    },
-    "cpu": {
-        "format": "  {usage}%",
-        "interval": 1
-    },
-    "battery": {
-    	"format": "{capacity}%",
-    	"format-charging": "{capacity}% ",
-    	"format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
-    	"interval": 1
-    }
 }

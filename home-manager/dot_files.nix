@@ -79,7 +79,7 @@
         recursive = true;
       };
       home.file.".config/kitty" = {
-        source = ./dotfiles/kitty-nord-v2;
+        source = ./dotfiles/kitty-nord;
         recursive = true;
       };
 

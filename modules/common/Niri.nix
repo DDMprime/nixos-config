@@ -13,7 +13,7 @@
       kitty # терминал
       mako # демон уведомлений
       alacritty # терминал
-      mpvpapper # анимированные обои
+      mpvpaper # анимированные обои
       hyprlock # экран блокировки wayland
       hyprshot # инструмент для создания скриншотов wayland
       tofi # меню приложений

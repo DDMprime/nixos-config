@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, ... }:
 
 {
   # Импорт hardware-configuration
@@ -6,11 +6,11 @@
       ./hardware-configuration.nix
       ./mount_disks.nix
       ./../../modules/bundle.nix
-      inputs.home-manager.nixosModules.home-manager
+      #inputs.home-manager.nixosModules.home-manager
   ];
   #включаемые модули
-  hyprland.enable = false;
-  niri.enable = true;
+  hyprland.enable = true;
+  niri.enable = false;
   zsh.enable = true;
   nvidia.enable = true;
   input_remapper.enable = true;
@@ -44,7 +44,8 @@
     LC_TIME = "ru_RU.UTF-8";
   };
 
-  home-manager.users."ddm" = import ./home.nix;
+  #home-manager.users."ddm" = import ./home.nix;
+  services.flatpak.enable = true; # включение флетпака
 
   # Пользователь
   users.users.ddm = {
@@ -59,7 +60,6 @@
   services.displayManager.autoLogin.user = "ddm";
 
   services.logind.killUserProcesses = true; # Завершение всех пользовательских процессов при выключении
-  systemd.coredump.enable = false;
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;

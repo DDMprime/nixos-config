@@ -8,6 +8,7 @@
       xdg-desktop-portal
       xdg-desktop-portal-hyprland
       xdg-desktop-portal-gtk
+      xdg-user-dirs
       waybar # панель задач
       kitty # терминал по умолчанию в hyprland
       #dunst # демон уведомлений по умолчанию в hyprland
@@ -26,6 +27,8 @@
       zsh # zsh оболочка для терминала
       zsh-syntax-highlighting
       playerctl # отображение звука на waybar
+
+      eww
 
       # Настройки GTK/QT
       libsForQt5.qt5ct # настройка qt5ct

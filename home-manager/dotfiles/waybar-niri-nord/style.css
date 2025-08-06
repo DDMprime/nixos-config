@@ -4,8 +4,10 @@
 }
 window#waybar {
     border-bottom: 1px solid #181825;
-    border-radius: 10px;
+/*    border-radius: 10px;*/
+    background-color: rgba(30, 30, 30, 0.85);  /* <-- ДОБАВЬ ЭТО */
 }
+
 
 
 #clock,

@@ -3,7 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-24.11"; #stable ветка
+    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.05"; #stable ветка
 
     home-manager = {
       url = "github:nix-community/home-manager"; #release-24.11 stable
@@ -27,15 +27,15 @@
             ];
           })
           ./hosts/main-desktop/desktop-host.nix
-          inputs.home-manager.nixosModules.home-manager
+          #inputs.home-manager.nixosModules.home-manager
         ];
       };
 
 
-      /*
+
       homeConfigurations.ddm = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.${system};
         modules = [ ./hosts/main-desktop/home.nix ];
-      };*/
+      };
     };
 }
