@@ -14,9 +14,11 @@
       ];
     })
     telegram-desktop
+    obsidian
     discord
     spotify
     xfce.thunar # файловый менеджер
+    prismlauncher
     qbittorrent # торрент-клиент
     stable.mpv # видео-плеер
     libreoffice-qt6-fresh

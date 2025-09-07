@@ -17,7 +17,7 @@
       };
 
       nvidia = {
-        open = false;
+        open = true;
 
         modesetting.enable = true; # Необходимо для Wayland
         powerManagement.enable = true; # Управление питанием

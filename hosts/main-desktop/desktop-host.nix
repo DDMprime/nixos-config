@@ -14,7 +14,7 @@
   zsh.enable = true;
   nvidia.enable = true;
   input_remapper.enable = true;
-  zerotier.enable = false;
+  zerotier.enable = true;
   tailscale.enable = false;
   zapret.enable = true;
   ssh.enable = false;
@@ -42,6 +42,13 @@
     LC_PAPER = "ru_RU.UTF-8";
     LC_TELEPHONE = "ru_RU.UTF-8";
     LC_TIME = "ru_RU.UTF-8";
+  };
+
+  #раскладка клавиатуры
+  services.xserver.xkb = {
+    layout = "us,ru";
+    variant = "";
+    options = "grp:alt_shift_toggle";
   };
 
   #home-manager.users."ddm" = import ./home.nix;
