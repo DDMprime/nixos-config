@@ -7,18 +7,13 @@
 
     nvf.url = "github:notashelf/nvf"; #neovim настройка
 
-    caelestia-shell = {
-      url = "github:caelestia-dots/shell";
-      inputs.nixpkgs.follows = "nixpkgs";
-    }; # оболочка
-
     home-manager = {
       url = "github:nix-community/home-manager"; #release-24.11 stable
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, nvf, caelestia-shell, ...}@inputs:
+  outputs = { self, nixpkgs, home-manager, nvf, ...}@inputs:
     let
       system = "x86_64-linux";
     in
@@ -43,7 +38,7 @@
 
       homeConfigurations.ddm = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.${system};
-        modules = [ ./hosts/main-desktop/home.nix];
+        modules = [ ./hosts/main-desktop/home.nix ];
       };
     };
 }

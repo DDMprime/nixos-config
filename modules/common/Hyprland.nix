@@ -36,17 +36,14 @@
       kdePackages.qtwayland
       kdePackages.qtstyleplugin-kvantum #kvantum
       libsForQt5.qtstyleplugin-kvantum #kvantum
-      gtk-engine-murrine #для gtk тем
-      gnome-themes-extra #adwaita темы для gtk
+#       gtk-engine-murrine #для gtk тем
+#       gnome-themes-extra #adwaita темы для gtk
       nwg-look #для удобной настройки тем gtk
       polkit_gnome #для запроса повышения прав приложения
       catppuccin # тема catppuccin
-      nordic # тема nord
-      nordzy-icon-theme # адекватные иконки nord
-      (pkgs.catppuccin-gtk.override {
-        accents = [ "red" ];    # Акцентный цвет
-        variant = "mocha";      # Вариант Mocha
-      })
+#       catppuccin-gtk
+#       nordic # тема nord
+#       nordzy-icon-theme # адекватные иконки nord
     ];
   };
 }
