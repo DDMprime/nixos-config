@@ -34,34 +34,34 @@
         recursive = true;
       };
 
-      home.file.".config/wlogout" = {
-        source = ./dotfiles/wlogout-nord;
-        recursive = true;
-      };
+#       home.file.".config/wlogout" = {
+#         source = ./dotfiles/wlogout-nord;
+#         recursive = true;
+#       };
 
       home.file.".config/swaync" = {
         source = ./dotfiles/swaync-hypr-nord;
         recursive = true;
       };
 
-      home.file.".config/rofi" = {
-        source = ./dotfiles/rofi-hypr-nord;
-        recursive = true;
-      };
+#       home.file.".config/rofi" = {
+#         source = ./dotfiles/rofi-hypr-nord;
+#         recursive = true;
+#       };
 
       home.file.".config/kitty" = {
         source = ./dotfiles/kitty-nord;
         recursive = true;
       };
-      home.file.".config/btop" = {
-        source = ./dotfiles/btop-nord;
-        recursive = true;
-      };
+#       home.file.".config/btop" = {
+#         source = ./dotfiles/btop-nord;
+#         recursive = true;
+#       };
 
-      home.file.".config/cava" = {
-        source = ./dotfiles/cava-nord;
-        recursive = true;
-      };
+#       home.file.".config/cava" = {
+#         source = ./dotfiles/cava-nord;
+#         recursive = true;
+#       };
     })
 
     #Niri

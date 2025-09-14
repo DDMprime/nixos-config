@@ -30,6 +30,7 @@
     ./services/remote_access.nix
     ./services/i2p.nix
     ./services/shared.nix
+    ./services/zram.nix
   ];
 
 }

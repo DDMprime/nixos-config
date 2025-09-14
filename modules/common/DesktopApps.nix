@@ -13,6 +13,7 @@
         "--ozone-platform=wayland"
       ];
     })
+    lutris
     telegram-desktop
     obsidian
     discord
