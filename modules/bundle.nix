@@ -17,6 +17,7 @@
     ./enivronments/hyprland.nix
     ./enivronments/niri.nix
     ./enivronments/zsh.nix
+    ./enivronments/neovim.nix
 
     #Hardware
     ./hardware/nvidia-gpu.nix

@@ -46,6 +46,7 @@
           "--filter-tcp=80 --ipset=${ALL_IPSET} --dpi-desync=fake,multisplit --dpi-desync-autottl=2 --dpi-desync-fooling=md5sig --new"
           "--filter-tcp=443,1024-65535 --ipset=${ALL_IPSET} --dpi-desync=multisplit --dpi-desync-split-seqovl=652 --dpi-desync-split-pos=2 --dpi-desync-split-seqovl-pattern=/zapret/fake/tls_clienthello_www_google_com.bin --new" # game filter
           "--filter-udp=1024-65535 --ipset=${ALL_IPSET} --dpi-desync=fake --dpi-desync-autottl=2 --dpi-desync-repeats=12 --dpi-desync-any-protocol=1 --dpi-desync-fake-unknown-udp=/zapret/fake/quic_initial_www_google_com.bin --dpi-desync-cutoff=n2 --new" # game filter
+          "--filter-tcp=443 --hostlist-domains=itch.io,img.itch.zone,html-classic.itch.zone --dpi-desync=fake,fakedsplit --dpi-desync-fake-tls-mod=sni=none --dpi-desync-split-seqovl=681 --dpi-desync-fooling=badseq --dpi-desync-badseq-increment=7000 --new"
           "--filter-tcp=6695-6710 --dpi-desync=fake,split2 --dpi-desync-repeats=8 --dpi-desync-fooling=md5sig --dpi-desync-autottl=2 --dpi-desync-fake-tls=/zapret/fake/tls_clienthello_www_google_com.bin"
         ];
        };

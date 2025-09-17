@@ -39,7 +39,7 @@
     retroshare
     audacity # редактирование аудио
     rare # epic games GUI
-    gimp # для создания изображений и их редактирования
+    gimp3-with-plugins # для создания изображений и их редактирования
     inkscape # для создания векторного видео
     easyeffects # смена голоса
     keepassxc # менеджер паролей
@@ -47,6 +47,5 @@
     anki # учить слова на английском
     librewolf # firefox с вырезанной телеметрией и встроенной защитой
     hexchat # IRC мессенджер
-    hyprpanel
   ];
 }
