@@ -8,7 +8,7 @@
           theme.style = "mocha";
 
           startPlugins = with pkgs.vimPlugins; [
-            nvim-tree-lua
+            filetree
           ];
           languages.nix.enable = true;
           languages.clang.enable = true;
