@@ -8,7 +8,11 @@
           theme.style = "mocha";
 
           startPlugins = with pkgs.vimPlugins; [
-            filetree
+            nvim-tree-lua
+#             {
+#                 plugin = nvim-tree-lua;
+#                 config = builtins.readFile(./nvimPlugins/filetree.lua);
+#             }
           ];
           languages.nix.enable = true;
           languages.clang.enable = true;
