@@ -29,6 +29,7 @@
       WLR_NO_HARDWARE_CURSORS = "1"; # Решает проблемы с курсором
       NIXOS_OZONE_WL = "1"; # Для Wayland-совместимых приложений
       JAVA_TOOL_OPTIONS = "-Dorg.lwjgl.glfw.libname=${pkgs.glfw3}/lib/libglfw.so -Dorg.lwjgl.openal.libname=${pkgs.openal}/lib/libopenal.so"; # Для маинкрафта
+      TERM = "kitty";
     };
 
     programs.hyprland = {

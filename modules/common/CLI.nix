@@ -33,5 +33,6 @@
     jdk17 # для сервера
     plex
     i2pd
+    libopus # для кодека opus
   ];
 }
