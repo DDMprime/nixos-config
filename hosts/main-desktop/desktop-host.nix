@@ -66,7 +66,7 @@
   services.displayManager.autoLogin.enable = true;
   services.displayManager.autoLogin.user = "ddm";
 
-  services.logind.killUserProcesses = true; # Завершение всех пользовательских процессов при выключении
+  services.logind.settings.Login.KillUserProcesses = true; # Завершение всех пользовательских процессов при выключении
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
