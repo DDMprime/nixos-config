@@ -71,7 +71,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  boot.kernelPackages = pkgs.linuxPackages_latest; #latest ядро, стабильное (LTS) - 6_12
+  #boot.kernelPackages = pkgs.linuxPackages_6_16; #latest ядро, стабильное (LTS) - 6_12
 
   boot.extraModulePackages = [ config.boot.kernelPackages.v4l2loopback ]; #для создания виртуальной камеры
   boot.kernelModules = [ "v4l2loopback" ];

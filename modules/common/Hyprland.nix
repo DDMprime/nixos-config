@@ -27,8 +27,8 @@
       zsh # zsh оболочка для терминала
       zsh-syntax-highlighting
       playerctl # отображение звука на waybar
-
-      eww
+      quickshell
+      #eww
 
       # Настройки GTK/QT
       libsForQt5.qt5ct # настройка qt5ct

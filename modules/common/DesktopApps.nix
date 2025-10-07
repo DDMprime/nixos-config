@@ -13,30 +13,31 @@
         "--ozone-platform=wayland"
       ];
     })
-    lutris
-    telegram-desktop
-    obsidian
+    lutris-unwrapped # запуск эпик геймса
+    telegram-desktop # мессенджер телеграм
+    obsidian # заметки
     discord
-    spotify
+    #spotify
+    stable.musicpod # музыкальный плеер
     xfce.thunar # файловый менеджер
-    prismlauncher
+    prismlauncher # маинкрафт лаунчер
     qbittorrent # торрент-клиент
     stable.mpv # видео-плеер
-    libreoffice-qt6-fresh
+    libreoffice-qt6-fresh # либреоффис. Аналог word'а
     tor-browser
     input-remapper # для биндов
     nicotine-plus # для подключения к сети soulseek
-    koboldcpp # запуск ИИ
+    stable.koboldcpp # запуск ИИ
     mangohud # для статистики в играх
     qtox # для общения
     obs-studio # захват экрана
     vesktop #клиент дискорда с vencord'ом
-    kdePackages.kate # редактор кода kate
+    stable.kdePackages.kate # редактор кода kate
     qview # для просмотра изображений
     kdePackages.elisa # аудиоплеер
     firefox # браузер
     freetube # ютуб
-    retroshare
+    stable.retroshare
     audacity # редактирование аудио
     rare # epic games GUI
     gimp3-with-plugins # для создания изображений и их редактирования
