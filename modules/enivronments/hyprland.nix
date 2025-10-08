@@ -24,6 +24,15 @@
     };
 
     environment.sessionVariables = {
+      LIBGL_DRIVERS_PATH = "${pkgs.mesa}/lib/dri";
+      LD_LIBRARY_PATH = "/run/opengl-driver/lib:/run/opengl-driver-32/lib";
+      __GLX_VENDOR_LIBRARY_NAME = "nvidia";
+      GBM_BACKEND = "nvidia-drm";
+      __GL_GSYNC_ALLOWED = "0";
+      __GL_VRR_ALLOWED = "0";
+      __GLX_ALLOW_NV20_SUBPIXEL = "1";
+      GDK_BACKEND = "wayland,x11";
+
       QT_QPA_PLATFORM = "wayland";
       QT_QPA_PLATFORMTHEME = "qt6ct";
       WLR_NO_HARDWARE_CURSORS = "1"; # Решает проблемы с курсором
