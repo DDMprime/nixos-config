@@ -71,7 +71,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  #boot.kernelPackages = pkgs.linuxPackages_6_16; #latest ядро, стабильное (LTS) - 6_12
+  #boot.kernelPackages = old-nixpkgs.linuxPackages_6_12; #latest ядро, стабильное (LTS) - 6_12
 
   boot.extraModulePackages = [ config.boot.kernelPackages.v4l2loopback ]; #для создания виртуальной камеры
   boot.kernelModules = [ "v4l2loopback" ];
@@ -83,6 +83,8 @@
   boot.kernelParams = [ "nvidia_drm.modeset=1" ];
 
   nixpkgs.config.allowUnfree = true;
+  #nixpkgs.config.nvidia.acceptLicense = true;
+
   programs.fuse.userAllowOther = true; # для appimage
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];

@@ -4,6 +4,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.05"; #stable ветка
+    #old-nixpkgs.url = "github:NixOS/nixpkgs/c9b6fb798541223bbb396d287d16f43520250518"; # версия пакетов 2025.09.14
 
     nvf.url = "github:notashelf/nvf"; #neovim настройка
 
@@ -34,6 +35,12 @@
           #inputs.home-manager.nixosModules.home-manager
           nvf.nixosModules.default
           inputs.spicetify-nix.nixosModules.default
+
+          {
+            nixpkgs.overlays = [
+              (import ./overlays/nvidia-overlay.nix)
+            ];
+          }
         ];
       };
 

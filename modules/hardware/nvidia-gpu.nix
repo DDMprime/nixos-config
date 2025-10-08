@@ -1,5 +1,4 @@
-{ config, lib,  ... }:
-
+{ config, lib, pkgs,  ... }:
 {
 
   options = {
@@ -22,9 +21,11 @@
         modesetting.enable = true; # Необходимо для Wayland
         powerManagement.enable = true; # Управление питанием
 
-        package = config.boot.kernelPackages.nvidiaPackages.production; # production - стабильная версия 550
+        package = config.boot.kernelPackages.nvidiaPackages.myCustom; # production - стабильная версия 550
+
         forceFullCompositionPipeline = true;
         nvidiaSettings = true; # Панель управления NVIDIA
+
       };
     };
   };
