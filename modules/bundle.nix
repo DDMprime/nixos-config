@@ -18,7 +18,6 @@
     ./enivronments/niri.nix
     ./enivronments/zsh.nix
     ./enivronments/neovim.nix
-    ./enivronments/spicetify.nix
 
     #Hardware
     ./hardware/nvidia-gpu.nix

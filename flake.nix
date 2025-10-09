@@ -8,7 +8,7 @@
 
     nvf.url = "github:notashelf/nvf"; #neovim настройка
 
-    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+    #spicetify-nix.url = "github:Gerg-L/spicetify-nix";
 
     hyprland.url = "github:hyprwm/Hyprland";
 
@@ -18,7 +18,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, nvf, spicetify-nix, ...}@inputs:
+  outputs = { self, nixpkgs, home-manager, nvf, ...}@inputs:
     let
       system = "x86_64-linux";
     in
@@ -37,7 +37,7 @@
           ./hosts/main-desktop/desktop-host.nix
           #inputs.home-manager.nixosModules.home-manager
           nvf.nixosModules.default
-          inputs.spicetify-nix.nixosModules.default
+          #inputs.spicetify-nix.nixosModules.default
         ];
       };
 
