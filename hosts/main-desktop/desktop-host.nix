@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, old-nixpkgs, ... }:
 
 {
   # Импорт hardware-configuration
@@ -71,7 +71,8 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  #boot.kernelPackages = old-nixpkgs.linuxPackages_6_12; #latest ядро, стабильное (LTS) - 6_12
+  #boot.kernelPackages = old-nixpkgs.legacyPackages.x86_64-linux.linuxPackages_6_12; #latest ядро, стабильное (LTS) - 6_12
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   boot.extraModulePackages = [ config.boot.kernelPackages.v4l2loopback ]; #для создания виртуальной камеры
   boot.kernelModules = [ "v4l2loopback" ];
@@ -83,7 +84,7 @@
   boot.kernelParams = [ "nvidia_drm.modeset=1" ];
 
   nixpkgs.config.allowUnfree = true;
-  #nixpkgs.config.nvidia.acceptLicense = true;
+#   nixpkgs.config.nvidia.acceptLicense = true;
 
   programs.fuse.userAllowOther = true; # для appimage
 

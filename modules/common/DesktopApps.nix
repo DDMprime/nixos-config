@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs,  ... }:
 
 {
   environment.systemPackages = with pkgs; [
@@ -14,7 +14,7 @@
       ];
     })
     lutris-unwrapped # запуск эпик геймса
-    telegram-desktop # мессенджер телеграм
+    old-pkgs.telegram-desktop # мессенджер телеграм
     obsidian # заметки
     discord
     #spotify
