@@ -14,7 +14,7 @@
       ];
     })
     lutris-unwrapped # запуск эпик геймса
-    old-pkgs.telegram-desktop # мессенджер телеграм
+    telegram-desktop # мессенджер телеграм
     obsidian # заметки
     discord
     #spotify
@@ -32,7 +32,7 @@
     qtox # для общения
     obs-studio # захват экрана
     vesktop #клиент дискорда с vencord'ом
-    stable.kdePackages.kate # редактор кода kate
+    kdePackages.kate # редактор кода kate
     qview # для просмотра изображений
     kdePackages.elisa # аудиоплеер
     firefox # браузер

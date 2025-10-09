@@ -10,39 +10,34 @@
 
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
 
+    hyprland.url = "github:hyprwm/Hyprland";
+
     home-manager = {
       url = "github:nix-community/home-manager"; #release-24.11 stable
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, nvf, spicetify-nix, old-nixpkgs, ...}@inputs:
+  outputs = { self, nixpkgs, home-manager, nvf, spicetify-nix, ...}@inputs:
     let
       system = "x86_64-linux";
     in
     {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs system old-nixpkgs;};
+        specialArgs = {inherit inputs system;};
         modules = [
           ({ config, pkgs, ... }: {
             nixpkgs.overlays = [
               (final: prev: {
                 stable = inputs.nixpkgs-stable.legacyPackages.${prev.system}; #добавляем оверлей для стабильной ветки. Вызывается с помощью pkgs.stable
-                old-pkgs = old-nixpkgs.legacyPackages.${prev.system};
+                old-pkgs = inputs.old-nixpkgs.legacyPackages.${prev.system};
               })
-              #(import ./overlays/nvidia-overlay.nix)
             ];
           })
           ./hosts/main-desktop/desktop-host.nix
           #inputs.home-manager.nixosModules.home-manager
           nvf.nixosModules.default
           inputs.spicetify-nix.nixosModules.default
-
-#           ({ config, pkgs, ... }: {
-#             #hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.mine;
-#             #hardware.nvidia.package = pkgs.linuxPackages.nvidiaPackages.mine;
-#             hardware.nvidia.package = pkgs.linuxPackages.nvidiaPackages.mine;
-#           })
         ];
       };
 

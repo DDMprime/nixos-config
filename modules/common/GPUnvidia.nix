@@ -14,20 +14,9 @@
       vulkan-tools
       vulkan-loader
       vulkan-validation-layers
-      mesa
+      #mesa
       cudatoolkit # для работы CUDA
       cudaPackages.cudnn # для работы CUDA
-
-      # Библиотеки для GL
-      libGL
-      libGLU
-      xorg.libX11
-      xorg.libXext
-      xorg.libXrandr
-      xorg.libXxf86vm
-      xorg.libXcursor
-      xorg.libXi
-      xorg.libXinerama
     ];
   };
 }

@@ -1,4 +1,4 @@
-{ lib, config, pkgs,  ... }:
+{ lib, config, pkgs, inputs,  ... }:
 
 {
   options = {
@@ -28,6 +28,7 @@
       LD_LIBRARY_PATH = "/run/opengl-driver/lib:/run/opengl-driver-32/lib";
       __GLX_VENDOR_LIBRARY_NAME = "nvidia";
       GBM_BACKEND = "nvidia-drm";
+      EGL_PLATFORM = "wayland";
       __GL_GSYNC_ALLOWED = "0";
       __GL_VRR_ALLOWED = "0";
       __GLX_ALLOW_NV20_SUBPIXEL = "1";
@@ -44,6 +45,8 @@
     programs.hyprland = {
       enable = true;
       xwayland.enable = true; # Для X11-приложений
+      package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+      portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
     };
   };
 }

@@ -4,7 +4,7 @@
   config = lib.mkIf config.hyprland.enable {
     environment.systemPackages = with pkgs; [
       # WM stuff
-      hyprland # окружение
+      #old-pkgs.hyprland # окружение
       xdg-desktop-portal
       xdg-desktop-portal-hyprland
       xdg-desktop-portal-gtk
