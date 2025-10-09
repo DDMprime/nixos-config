@@ -13,7 +13,7 @@
         "--ozone-platform=wayland"
       ];
     })
-    lutris-unwrapped # запуск эпик геймса
+    lutris # запуск эпик геймса
     telegram-desktop # мессенджер телеграм
     obsidian # заметки
     discord
