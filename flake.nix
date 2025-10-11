@@ -12,13 +12,11 @@
 
     hyprland.url = "github:hyprwm/Hyprland"; # окружение wayland
 
-#     niri-unstable.url = "github:YaLTeR/niri";
-#     niri = {
-#       url = "github:sodiboo/niri-flake";
-#       inputs.niri-unstable.follows = "niri-unstable";
-#     }; # окружение wayland
-
-
+    niri-unstable.url = "github:YaLTeR/niri";
+    niri = {
+      url = "github:sodiboo/niri-flake";
+      inputs.niri-unstable.follows = "niri-unstable";
+    }; # окружение wayland
 
     home-manager = {
       url = "github:nix-community/home-manager"; #release-24.11 stable
@@ -34,14 +32,7 @@
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs system;};
         modules = [
-          ({ config, pkgs, ... }: {
-            nixpkgs.overlays = [
-              (final: prev: {
-                stable = inputs.nixpkgs-stable.legacyPackages.${prev.system}; #добавляем оверлей для стабильной ветки. Вызывается с помощью pkgs.stable
-                #old-pkgs = inputs.old-nixpkgs.legacyPackages.${prev.system};
-              })
-            ];
-          })
+          ./overlays
           ./hosts/main-desktop/desktop-host.nix
           #inputs.home-manager.nixosModules.home-manager
           nvf.nixosModules.default
