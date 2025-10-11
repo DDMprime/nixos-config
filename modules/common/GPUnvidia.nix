@@ -14,7 +14,7 @@
       vulkan-tools
       vulkan-loader
       vulkan-validation-layers
-      #mesa
+      mesa
       cudatoolkit # для работы CUDA
       cudaPackages.cudnn # для работы CUDA
     ];

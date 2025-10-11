@@ -1,6 +1,6 @@
 {
   imports = [
-    ./../../home-manager/home-bundle.nix
+    ./../../home-manager
   ];
 
   home = {

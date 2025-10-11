@@ -4,13 +4,21 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.05"; #stable ветка
-    old-nixpkgs.url = "github:NixOS/nixpkgs/c9b6fb798541223bbb396d287d16f43520250518"; # версия пакетов 2025.09.14
+    #old-nixpkgs.url = "github:NixOS/nixpkgs/c9b6fb798541223bbb396d287d16f43520250518"; # версия пакетов 2025.09.14
 
-    nvf.url = "github:notashelf/nvf"; #neovim настройка
+    nvf.url = "github:notashelf/nvf"; # neovim настройка
 
-    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+    spicetify-nix.url = "github:Gerg-L/spicetify-nix"; # кастомный спотифай
 
-    hyprland.url = "github:hyprwm/Hyprland";
+    hyprland.url = "github:hyprwm/Hyprland"; # окружение wayland
+
+#     niri-unstable.url = "github:YaLTeR/niri";
+#     niri = {
+#       url = "github:sodiboo/niri-flake";
+#       inputs.niri-unstable.follows = "niri-unstable";
+#     }; # окружение wayland
+
+
 
     home-manager = {
       url = "github:nix-community/home-manager"; #release-24.11 stable
@@ -30,7 +38,7 @@
             nixpkgs.overlays = [
               (final: prev: {
                 stable = inputs.nixpkgs-stable.legacyPackages.${prev.system}; #добавляем оверлей для стабильной ветки. Вызывается с помощью pkgs.stable
-                old-pkgs = inputs.old-nixpkgs.legacyPackages.${prev.system};
+                #old-pkgs = inputs.old-nixpkgs.legacyPackages.${prev.system};
               })
             ];
           })

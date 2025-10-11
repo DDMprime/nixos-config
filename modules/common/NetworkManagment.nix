@@ -5,7 +5,7 @@
     # Network managment
     curl
     ipset
-    zapret
+    zapret # обход DPI
     iptables # для zapret'а
     nftables # для zapret'а
     proxychains # для управления прокси

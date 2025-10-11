@@ -12,22 +12,19 @@
         "--enable-zero-copy"
         "--ozone-platform=wayland"
       ];
-    })
+    }) # гугл хром с поддержкой nvidia
     lutris # запуск эпик геймса
     telegram-desktop # мессенджер телеграм
     obsidian # заметки
     discord
-    #spotify
-    stable.musicpod # музыкальный плеер
     xfce.thunar # файловый менеджер
     prismlauncher # маинкрафт лаунчер
     qbittorrent # торрент-клиент
-    stable.mpv # видео-плеер
+    mpv # видео-плеер
     libreoffice-qt6-fresh # либреоффис. Аналог word'а
     tor-browser
     input-remapper # для биндов
     nicotine-plus # для подключения к сети soulseek
-    stable.koboldcpp # запуск ИИ
     mangohud # для статистики в играх
     qtox # для общения
     obs-studio # захват экрана
@@ -42,7 +39,6 @@
     rare # epic games GUI
     gimp3-with-plugins # для создания изображений и их редактирования
     inkscape # для создания векторного видео
-    easyeffects # смена голоса
     keepassxc # менеджер паролей
     xarchiver # универсальный архиватор
     anki # учить слова на английском

@@ -1,11 +1,11 @@
-{ config, pkgs, old-nixpkgs, ... }:
+{ config, pkgs,  ... }:
 
 {
   # Импорт hardware-configuration
   imports = [
       ./hardware-configuration.nix
       ./mount_disks.nix
-      ./../../modules/bundle.nix
+      ./../../modules
       #inputs.home-manager.nixosModules.home-manager
   ];
   #включаемые модули
@@ -52,7 +52,7 @@
   };
 
   #home-manager.users."ddm" = import ./home.nix;
-  services.flatpak.enable = true; # включение флетпака
+  #services.flatpak.enable = true; # включение флетпака
 
   # Пользователь
   users.users.ddm = {

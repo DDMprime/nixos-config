@@ -31,10 +31,6 @@
             ];
 
             theme = spicePkgs.themes.matte;
-#             theme = {
-#                 name = "Nord-Spotify";
-#                 src = nordSpotify;
-#             };
-            #colorScheme = "spotify";
+            #colorScheme = "default";
         };
 }
