@@ -2,6 +2,7 @@
 
 {
   config.nixpkgs.overlays = [
-    (import ./stable-nixpkgs.nix ./yt-dlp.nix { inherit inputs; })
+    (import ./stable-nixpkgs.nix { inherit inputs; })
+    (import ./yt-dlp.nix)
   ];
 }

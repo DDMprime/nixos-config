@@ -1,16 +1,14 @@
-# overlays/yt-dlp-overlay.nix
 final: prev: {
-  # Переопределяем пакет yt-dlp
   yt-dlp = prev.stdenv.mkDerivation rec {
     pname = "yt-dlp";
-    version = "2025.06.30"; # Используем версию из релизов
+    version = "2025.10.14";
 
     src = prev.fetchurl {
       url = "https://github.com/yt-dlp/yt-dlp/releases/download/${version}/yt-dlp";
-      sha256 = "sha256-KZpJqWBgYkOz5qV8yNFx6Yw+6j3cJQF946KPqTj4R4M="; # Хэш для версии 2025.06.30
+      sha256 = "104d8103f871fe5f165a945ab82884fa4f34007a8ab0d377fbad54482b6e0b68";
     };
 
-    dontUnpack = true; # Бинарник не нуждается в распаковке
+    dontUnpack = true;
 
     installPhase = ''
       runHook preInstall
@@ -20,14 +18,14 @@ final: prev: {
       runHook postInstall
     '';
 
-    doCheck = false; # Бинарник, проверки не нужны
+    doCheck = false;
 
     meta = with prev.lib; {
       description = "A youtube-dl fork with additional features and fixes";
       homepage = "https://github.com/yt-dlp/yt-dlp";
-      license = licenses.unlicense; # yt-dlp использует Unlicense
+      license = licenses.unlicense;
       maintainers = [ ];
-      platforms = platforms.linux ++ platforms.darwin; # yt-dlp работает на Linux и Darwin
+      platforms = platforms.linux ++ platforms.darwin;
     };
   };
 }
