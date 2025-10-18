@@ -31,7 +31,8 @@
     vesktop #клиент дискорда с vencord'ом
     kdePackages.kate # редактор кода kate
     qview # для просмотра изображений
-    kdePackages.elisa # аудиоплеер
+    stable.kdePackages.elisa # аудиоплеер
+    sayonara
     firefox # браузер
     freetube # ютуб
     stable.retroshare

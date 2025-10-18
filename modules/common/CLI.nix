@@ -32,5 +32,6 @@
     jdk25 # для сервера
     i2pd
     libopus # для кодека opus
+    cmus # CLI аудиоплеер
   ];
 }

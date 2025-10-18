@@ -280,26 +280,56 @@
         presence.neocord.enable = true; # для интеграции в дискорд
 
         keymaps = [
+          {
+            key = "<C-l>";
+            action = ":bp<CR>";
+            mode = "n";
+            silent = true;
+          }
+          {
+            key = "<C-h>";
+            action = ":bn<CR>";
+            mode = "n";
+            silent = true;
+          }
 
-          # yanky-nvim config
-          { key = "p";     action = "<Plug>(YankyPutAfter)";                  mode = ["n" "x"]; silent = true; }
-          { key = "P";     action = "<Plug>(YankyPutBefore)";                   mode = ["n" "x"]; silent = true; }
-          { key = "gp";    action = "<Plug>(YankyGPutAfter)";                   mode = ["n" "x"]; silent = true; }
-          { key = "gP";    action = "<Plug>(YankyGPutBefore)";                  mode = ["n" "x"]; silent = true; }
-          { key = "<c-p>"; action = "<Plug>(YankyPreviousEntry)";               mode = "n";       silent = true; }
-          { key = "<c-n>"; action = "<Plug>(YankyNextEntry)";                   mode = "n";       silent = true; }
-          { key = "]p";    action = "<Plug>(YankyPutIndentAfterLinewise)";      mode = "n";       silent = true; }
-          { key = "[p";    action = "<Plug>(YankyPutIndentBeforeLinewise)";     mode = "n";       silent = true; }
-          { key = "]P";    action = "<Plug>(YankyPutIndentAfterLinewise)";      mode = "n";       silent = true; }
-          { key = "[P";    action = "<Plug>(YankyPutIndentBeforeLinewise)";     mode = "n";       silent = true; }
-          { key = ">p";    action = "<Plug>(YankyPutIndentAfterShiftRight)";    mode = "n";       silent = true; }
-          { key = "<p";    action = "<Plug>(YankyPutIndentAfterShiftLeft)";     mode = "n";       silent = true; }
-          { key = ">P";    action = "<Plug>(YankyPutIndentBeforeShiftRight)";   mode = "n";       silent = true; }
-          { key = "<P";    action = "<Plug>(YankyPutIndentBeforeShiftLeft)";    mode = "n";       silent = true; }
-          { key = "=p";    action = "<Plug>(YankyPutAfterFilter)";              mode = "n";       silent = true; }
-          { key = "=P";    action = "<Plug>(YankyPutBeforeFilter)";             mode = "n";       silent = true; }
-          { key = "<c-l>"; action = ":bp"; mode = "n"; silent = true; }
-          { key = "<c-h>"; action = ":bn"; mode = "n"; silent = true; }
+          # Telescope
+          {
+            key = "ff";
+            action = "<cmd>Telescope find_files<CR>";
+            mode = "n";
+            silent = true;
+          }
+          {
+            key = "fg";
+            action = "<cmd>Telescope live_grep<CR>";
+            mode = "n";
+            silent = true;
+          }
+          {
+            key = "fb";
+            action = "<cmd>Telescope buffers<CR>";
+            mode = "n";
+            silent = true;
+          }
+          {
+            key = "fh";
+            action = "<cmd>Telescope help_tags<CR>";
+            mode = "n";
+            silent = true;
+          }
+          {
+            key = "gz";
+            action = ":wq<CR>";
+            mode = "n";
+            silent = true;
+          }
+          {
+            key = "ga";
+            action = ":w<CR>";
+            mode = "n";
+            silent = true;
+          }
         ];
     };
   };
