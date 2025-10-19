@@ -11,6 +11,10 @@
     spicetify-nix.url = "github:Gerg-L/spicetify-nix"; # кастомный спотифай
 
     hyprland.url = "github:hyprwm/Hyprland"; # окружение wayland
+    hyprland-plugins = {
+      url = "github:hyprwm/hyprland-plugins";
+      inputs.hyprland.follows = "hyprland";
+    };
 
     niri-unstable.url = "github:YaLTeR/niri";
     niri = {

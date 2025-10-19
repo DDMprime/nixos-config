@@ -19,6 +19,7 @@
     ./enivronments/zsh.nix
     ./enivronments/neovim.nix
     ./enivronments/spicetify.nix
+    ./enivronments/hyprland_plug.nix
 
     #Hardware
     ./hardware/nvidia-gpu.nix
