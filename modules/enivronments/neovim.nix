@@ -1,4 +1,4 @@
-{pkgs, ... }: {
+{pkgs, UserConfig, ... }: {
   programs.nvf = {
   enable = true;
 
@@ -267,9 +267,9 @@
             setupOpts = {
               autoload_mode = "CurrentDir";
               autosave_ignore_dirs = [
-                "/home/ddm"
-                "/home/ddm/Загрузки"
-                #"/home/ddm/tmp"
+                "/home/${UserConfig.user}"
+                "/home/${UserConfig.user}/Загрузки"
+                #"/home/${UUserConfig.user}/tmp"
               ];
             };
           };
