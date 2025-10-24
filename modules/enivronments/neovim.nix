@@ -282,13 +282,13 @@
         keymaps = [
           {
             key = "<C-l>";
-            action = ":bp<CR>";
+            action = ":bn<CR>";
             mode = "n";
             silent = true;
           }
           {
             key = "<C-h>";
-            action = ":bn<CR>";
+            action = ":bp<CR>";
             mode = "n";
             silent = true;
           }
@@ -330,6 +330,7 @@
             mode = "n";
             silent = true;
           }
+
         ];
     };
   };

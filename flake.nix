@@ -32,10 +32,11 @@
     let
       system = "x86_64-linux";
       user = "ddm";
+      hyprland_enabled = true;
     in
     {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs system user;};
+        specialArgs = {inherit inputs system user hyprland_enabled;};
         modules = [
           ./overlays
           ./hosts/main-desktop/desktop-host.nix
@@ -47,8 +48,9 @@
 
 
 
-      homeConfigurations.ddm = home-manager.lib.homeManagerConfiguration {
+      homeConfigurations.${user} = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.${system};
+        extraSpecialArgs = { inherit user hyprland_enabled; };
         modules = [ ./hosts/main-desktop/home.nix ];
       };
     };

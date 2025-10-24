@@ -1,4 +1,4 @@
-{ config, pkgs,  ... }:
+{ config, pkgs, UserConfig, ... }:
 
 {
   # Импорт hardware-configuration
@@ -9,18 +9,18 @@
       #inputs.home-manager.nixosModules.home-manager
   ];
   #включаемые модули
-  hyprland.enable = true;
-  niri.enable = false;
-  zsh.enable = true;
-  nvidia.enable = true;
-  input_remapper.enable = true;
-  zerotier.enable = true;
-  tailscale.enable = false;
-  zapret.enable = true;
-  ssh.enable = false;
-  i2p.enable = true;
-  samba.enable = false;
-  steam.enable = true;
+  hyprland.enable = UserConfig.ConfigFile.hyprland.enable;
+  niri.enable = UserConfig.ConfigFile.niri.enable;
+  zsh.enable = UserConfig.ConfigFile.zsh.enable;
+  nvidia.enable = UserConfig.ConfigFile.nvidia.enable;
+  input_remapper.enable = UserConfig.ConfigFile.input_remapper.enable;
+  zerotier.enable = UserConfig.ConfigFile.zerotier.enable;
+  tailscale.enable = UserConfig.ConfigFile.tailscale.enable;
+  zapret.enable = UserConfig.ConfigFile.zapret.enable;
+  ssh.enable = UserConfig.ConfigFile.ssh.enable;
+  i2p.enable = UserConfig.ConfigFile.i2p.enable;
+  samba.enable = UserConfig.ConfigFile.samba.enable;
+  steam.enable = UserConfig.ConfigFile.steam.enable;
 
   #имя хоста и локали
   networking = {
@@ -51,20 +51,20 @@
     options = "grp:alt_shift_toggle";
   };
 
-  #home-manager.users."ddm" = import ./home.nix;
+  #home-manager.users.${user} = import ./home.nix;
   #services.flatpak.enable = true; # включение флетпака
 
   # Пользователь
-  users.users.ddm = {
+  users.users.${UserConfig.user} = {
     isNormalUser = true;
-    description = "DDM";
+    description = UserConfig.user;
     extraGroups = [ "wheel" "video" "audio" "networkmanager" ];
     shell = pkgs.zsh;
   };
 
   # Автоматический вход (можно выключить для безопасности)
   services.displayManager.autoLogin.enable = true;
-  services.displayManager.autoLogin.user = "ddm";
+  services.displayManager.autoLogin.user = UserConfig.user;
 
   services.logind.settings.Login.KillUserProcesses = true; # Завершение всех пользовательских процессов при выключении
 

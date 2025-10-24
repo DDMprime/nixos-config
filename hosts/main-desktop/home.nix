@@ -1,14 +1,14 @@
-{
+{ UserConfig, ... }: {
   imports = [
     ./../../home-manager
   ];
 
   home = {
-    username = "ddm";
-    homeDirectory = "/home/ddm";
+    username = UserConfig.user;
+    homeDirectory = "/home/${UserConfig.user}";
     stateVersion = "25.05";
   };
 
-  niri.enable = false;
-  hyprland.enable = true;
+  niri.enable = UserConfig.ConfigFile.niri.enable;
+  hyprland.enable = UserConfig.ConfigFile.hyprland.enable;
 }
