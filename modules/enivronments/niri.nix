@@ -1,4 +1,4 @@
-{ lib, config, pkgs, inputs,  ... }:
+{ lib, config, pkgs, inputs, UserConfig, ... }:
 
 {
   #imports = [ inputs.niri.nixosModules.niri ];
@@ -25,7 +25,7 @@
       settings = rec {
         initial_session = {
           command = "${pkgs.niri}/bin/niri";
-          user = "ddm";
+          user = UserConfig.user;
         };
         default_session = initial_session;
       };

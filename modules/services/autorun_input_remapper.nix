@@ -1,4 +1,4 @@
-{ pkgs, lib, config,  ... }:
+{ pkgs, lib, config, UserConfig, ... }:
 
 {
   options = {
@@ -19,7 +19,7 @@
           name = "start-input-mapper-daemon";
           runtimeInputs = with pkgs; [input-remapper procps su];
           text = ''
-            until pgrep -u ddm; do
+            until pgrep -u ${UserConfig.user}; do
               sleep 1
             done
             sleep 2
@@ -29,8 +29,8 @@
               input-remapper-reader-service&
               sleep 1
             done
-            su ddm -c "input-remapper-control --command stop-all"
-            su ddm -c "input-remapper-control --command autoload"
+            su ${UserConfig.user} -c "input-remapper-control --command stop-all"
+            su ${UserConfig.user} -c "input-remapper-control --command autoload"
             sleep infinity
           '';
       });
@@ -42,7 +42,7 @@
         description = "Reload input-remapper config after sleep";
         after = [ "suspend.target" ];
         serviceConfig = {
-          User = "ddm";
+          User = UserConfig.user;
       Type = "forking";
         };
         script = lib.getExe(pkgs.writeShellApplication {

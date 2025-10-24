@@ -16,15 +16,7 @@
             PasswordAuthentication = true;
         };
     };
-
-    # Разрешаем доступ по SSH через firewall (если используется)
-    #networking.firewall.allowedTCPPorts = [ 22 ];
-    networking.firewall.interfaces."zt+" = {
-      allowedTCPPorts = [ 22 ];
-    };
-    services.plex = {
-      enable = true;
-      openFirewall = true;
-    };
+    
+    networking.firewall.allowedTCPPorts = [ 22 ];
   };
 }

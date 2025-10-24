@@ -1,4 +1,4 @@
-{ lib, config, pkgs, inputs,  ... }:
+{ lib, config, pkgs, inputs, UserConfig, ... }:
 
 {
   options = {
@@ -8,18 +8,20 @@
 
 
   config = lib.mkIf config.hyprland.enable {
+    
+    services = {
+      xserver.enable = true;
+      # Enable the Hyprland Desktop Environment
+      udisks2.enable = true;
+      dbus.enable = true;
+      gvfs.enable = true;
 
-    services.xserver.enable = true;
-    # Enable the Hyprland Desktop Environment
-    services.udisks2.enable = true;
-    services.dbus.enable = true;
-    services.gvfs.enable = true;
-
-    services.displayManager = {
-      sddm.enable = false;
-      autoLogin = {
-        enable = true;
-        user = "ddm";
+      displayManager = {
+        sddm.enable = false;
+        autoLogin = {
+          enable = true;
+          user = UserConfig.user;
+        };
       };
     };
 
