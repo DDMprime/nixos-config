@@ -1,4 +1,4 @@
-{ lib, pkgs, inputs, ... }:
+{ lib, pkgs, inputs, config, ... }:
 
 with lib; let
   hyprPluginPkgs = inputs.hyprland-plugins.packages.${pkgs.system};
@@ -11,12 +11,6 @@ with lib; let
   };
 in
 {
-  options = {
-    hyprland.enable =
-      lib.mkEnableOption "enables hyprland";
-  };
-
-
   config = lib.mkIf config.hyprland.enable {
     environment.sessionVariables = { HYPR_PLUGIN_DIR = hypr-plugin-dir; };
   };

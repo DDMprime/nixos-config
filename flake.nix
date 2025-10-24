@@ -31,10 +31,11 @@
   outputs = { self, nixpkgs, home-manager, nvf, spicetify-nix, ...}@inputs:
     let
       system = "x86_64-linux";
+      user = "ddm";
     in
     {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs system;};
+        specialArgs = {inherit inputs system user;};
         modules = [
           ./overlays
           ./hosts/main-desktop/desktop-host.nix

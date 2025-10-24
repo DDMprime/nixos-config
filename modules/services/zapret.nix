@@ -1,4 +1,4 @@
-{ lib, config, ... }:
+{ lib, config, user, ... }:
 
 {
   options = {
@@ -9,10 +9,10 @@
 
   config = lib.mkIf config.zapret.enable (
     let
-      LIST_PATH = "/zapret/lists/list-zapret.txt";
+      LIST_PATH = "/home/${user}/nixos-config/zapret/lists/list-zapret.txt";
 #       DISCORD_IPSET_PATH = "/zapret/lists/ipset-discord.txt";
 #       CLOUDFLARE_IPSET_PATH = "/zapret/lists/ipset-cloudflare.txt";
-      ALL_IPSET = "/zapret/lists/ipset-all.txt";
+      ALL_IPSET = "/home/${user}/nixos-config/zapret/lists/ipset-all.txt";
 #       QUICK_INITIAL = "/zapret/fake/quic_initial_www_google_com.bin";
 #       CLIENT_HELLO = "/zapret/fake/tls_clienthello_www_google_com.bin";
     in {
