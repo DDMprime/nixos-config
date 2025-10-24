@@ -30,13 +30,12 @@
 
   outputs = { self, nixpkgs, home-manager, nvf, spicetify-nix, ...}@inputs:
     let
-      system = "x86_64-linux";
-      user = "ddm";
-      hyprland_enabled = true;
+      Config = import ./hosts/main-desktop/user_config.nix;
+      UserConfig = Config;
     in
     {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs system user hyprland_enabled;};
+        specialArgs = {inherit inputs UserConfig;};
         modules = [
           ./overlays
           ./hosts/main-desktop/desktop-host.nix
@@ -48,9 +47,9 @@
 
 
 
-      homeConfigurations.${user} = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.${system};
-        extraSpecialArgs = { inherit user hyprland_enabled; };
+      homeConfigurations.${UserConfig.user} = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.${UserConfig.system};
+        extraSpecialArgs = { inherit UserConfig; };
         modules = [ ./hosts/main-desktop/home.nix ];
       };
     };
