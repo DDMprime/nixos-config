@@ -21,6 +21,7 @@
   i2p.enable = UserConfig.ConfigFile.i2p.enable;
   samba.enable = UserConfig.ConfigFile.samba.enable;
   steam.enable = UserConfig.ConfigFile.steam.enable;
+  swapfile.enable = UserConfig.ConfigFile.swapfile.enable;
 
   #имя хоста и локали
   networking = {

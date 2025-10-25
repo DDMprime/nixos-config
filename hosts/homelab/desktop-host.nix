@@ -19,6 +19,7 @@
   samba.enable = UserConfig.ConfigFile.samba.enable;
   steam.enable = UserConfig.ConfigFile.steam.enable;
   tty.enable = UserConfig.ConfigFile.ssh.enable;
+  swapfile.enable = UserConfig.ConfigFile.swapfile.enable;
 
   #имя хоста и локали
   networking = {

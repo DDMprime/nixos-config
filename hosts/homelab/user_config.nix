@@ -17,6 +17,7 @@
     i2p.enable = false;
     samba.enable = false;
     steam.enable = false;
+    swapfile.enable = false;
   };
 
 }
