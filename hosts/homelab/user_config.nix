@@ -5,7 +5,7 @@
 
   ConfigFile = {
     hyprland.enable = false;
-    tty.enable = false;
+    tty.enable = true;
     niri.enable = false;
     zapret.enable = true;
     zsh.enable = true;

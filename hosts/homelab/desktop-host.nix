@@ -23,7 +23,7 @@
 
   #имя хоста и локали
   networking = {
-    hostName = "nixos-homelab";
+    hostName = UserConfig.user;
     networkmanager.enable = true;
   };
 
