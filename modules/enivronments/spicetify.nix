@@ -1,6 +1,15 @@
-{ inputs, pkgs, ... }:
+{ lib, config, inputs, pkgs, ... }:
 
 {
+  options = {
+    spicetify.enable =
+      lib.mkEnableOption "enable spotify custom";
+  };
+
+
+  config = lib.mkIf config.spicetify.enable {
+ 
+
     programs.spicetify =
         let
             spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.hostPlatform.system};
@@ -33,4 +42,6 @@
             theme = spicePkgs.themes.matte;
             #colorScheme = "default";
         };
+
+  };
 }
