@@ -1,17 +1,9 @@
 {
   imports = [
     #Common
-    ./common/CLI.nix
-    ./common/CodingStuff.nix
-    ./common/DesktopApps.nix
-    ./common/Fonts.nix
-    ./common/GPUnvidia.nix
-    ./common/Hyprland.nix
-    ./common/NetworkManagment.nix
-    ./common/Niri.nix
-    ./common/Other.nix
-    ./common/Sound.nix
-    ./common/Steam.nix
+    ./common/user_packages.nix
+    ./common/steam.nix
+    ./common/fonts.nix
 
     #Environments
     ./enivronments/hyprland.nix

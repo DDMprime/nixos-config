@@ -1,6 +1,7 @@
-{
+{ pkgs, ... }: {
   user = "homelab";
   system = "x86_64-linux";
+  HomelabPackages = true;
 
   ConfigFile = {
     hyprland.enable = false;
@@ -17,4 +18,5 @@
     samba.enable = false;
     steam.enable = false;
   };
+
 }

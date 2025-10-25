@@ -269,7 +269,7 @@
               autosave_ignore_dirs = [
                 "/home/${UserConfig.user}"
                 "/home/${UserConfig.user}/Загрузки"
-                #"/home/${UUserConfig.user}/tmp"
+                #"/home/${UserConfig.user}/tmp"
               ];
             };
           };

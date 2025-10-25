@@ -32,14 +32,17 @@
     let
       Config = import ./hosts/main-desktop/user_config.nix;
       UserConfig = Config;
+      ChooseSystem = {
+        PathToMainFile = ./hosts/main-desktop/desktop-host.nix;
+        PathToHomeFile = ./hosts/main-desktop/home.nix;
+      };
     in
     {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs UserConfig;};
         modules = [
           ./overlays
-          ./hosts/main-desktop/desktop-host.nix
-          #inputs.home-manager.nixosModules.home-manager
+          ChooseSystem.PathToMainFile
           nvf.nixosModules.default
           inputs.spicetify-nix.nixosModules.default
         ];
@@ -50,7 +53,7 @@
       homeConfigurations.${UserConfig.user} = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.${UserConfig.system};
         extraSpecialArgs = { inherit UserConfig; };
-        modules = [ ./hosts/main-desktop/home.nix ];
+        modules = [ ChooseSystem.PathToHomeFile ]; 
       };
     };
 }

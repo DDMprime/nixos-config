@@ -1,6 +1,7 @@
 {
   user = "ddm";
   system = "x86_64-linux";
+  DesktopPackages = true;
 
   ConfigFile = {
     hyprland.enable = true;
