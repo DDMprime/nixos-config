@@ -6,5 +6,6 @@
     ./NetworkManagment.nix
     ./Other.nix
     ./Sound.nix
+    ./Steam.nix
   ];
 }
