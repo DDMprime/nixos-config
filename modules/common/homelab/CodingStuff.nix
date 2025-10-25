@@ -9,5 +9,6 @@
     stable.python313 # стабильная версия python'а
     stable.python313Packages.pip
     nil # LSP сервер для .nix
+    ncurses
   ];
 }
