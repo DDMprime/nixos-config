@@ -1,7 +1,7 @@
 {
   user = "ddm";
   system = "x86_64-linux";
-  DesktopPackages = true;
+  PathToPackages = ../../modules/common/desktop-host;
 
   ConfigFile = {
     hyprland.enable = true;

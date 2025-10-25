@@ -1,10 +1,6 @@
-{
-  imports = [
-    #Common
-    ./common/user_packages.nix
-    ./common/steam.nix
-    ./common/fonts.nix
+{ UserConfig, ... }: {
 
+  imports = [
     #Environments
     ./enivronments/hyprland.nix
     ./enivronments/niri.nix
@@ -27,6 +23,6 @@
     ./services/i2p.nix
     ./services/shared.nix
     ./services/zram.nix
-  ];
+  ] ++ [ UserConfig.PathToPackages ];
 
 }

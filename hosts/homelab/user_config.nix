@@ -1,7 +1,7 @@
-{ pkgs, ... }: {
+{
   user = "homelab";
   system = "x86_64-linux";
-  HomelabPackages = true;
+  PathToPackages = ../../modules/common/homelab;
 
   ConfigFile = {
     hyprland.enable = false;

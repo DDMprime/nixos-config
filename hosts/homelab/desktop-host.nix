@@ -1,7 +1,6 @@
 { pkgs, UserConfig, ... }:
 
 {
-  # Импорт hardware-configuration
   imports = [
       ./hardware-configuration.nix
       ./../../modules
@@ -71,8 +70,6 @@
 
   #boot.kernelPackages = old-nixpkgs.legacyPackages.x86_64-linux.linuxPackages_6_12; #latest ядро, стабильное (LTS) - 6_12
   nixpkgs.config.allowUnfree = true;
-  
-  programs.fuse.userAllowOther = true; # для appimage
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   services.printing.enable = true;
