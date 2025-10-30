@@ -18,6 +18,7 @@
     samba.enable = false;
     steam.enable = false;
     swapfile.enable = false;
+    spicetify.enable = false;
   };
 
 }

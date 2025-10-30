@@ -1,11 +1,11 @@
 final: prev: {
   yt-dlp = prev.stdenv.mkDerivation rec {
     pname = "yt-dlp";
-    version = "2025.10.14";
+    version = "2025.10.22";
 
     src = prev.fetchurl {
       url = "https://github.com/yt-dlp/yt-dlp/releases/download/${version}/yt-dlp";
-      sha256 = "104d8103f871fe5f165a945ab82884fa4f34007a8ab0d377fbad54482b6e0b68";
+      sha256 = "/ZlodkU0AWMJTYshOQxZECkA8+e83R/AESYiv3KYnU8=";
     };
 
     dontUnpack = true;

@@ -20,6 +20,7 @@
   steam.enable = UserConfig.ConfigFile.steam.enable;
   tty.enable = UserConfig.ConfigFile.ssh.enable;
   swapfile.enable = UserConfig.ConfigFile.swapfile.enable;
+  spicetify.enable = UserConfig.ConfigFile.spicetify.enable;
 
   #имя хоста и локали
   networking = {

@@ -22,6 +22,7 @@
   samba.enable = UserConfig.ConfigFile.samba.enable;
   steam.enable = UserConfig.ConfigFile.steam.enable;
   swapfile.enable = UserConfig.ConfigFile.swapfile.enable;
+  spicetify.enable = UserConfig.ConfigFile.spicetify.enable;
 
   #имя хоста и локали
   networking = {
