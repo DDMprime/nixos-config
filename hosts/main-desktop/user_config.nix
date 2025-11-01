@@ -14,7 +14,7 @@
     tailscale.enable = false;
     ssh.enable = false;
     i2p.enable = true;
-    samba.enable = false;
+    samba.enable = true;
     steam.enable = true;
     swapfile.enable = true;
     spicetify.enable = true;
