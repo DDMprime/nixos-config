@@ -60,9 +60,13 @@
   users.users.${UserConfig.user} = {
     isNormalUser = true;
     description = UserConfig.user;
-    extraGroups = [ "wheel" "video" "audio" "networkmanager" ];
+    extraGroups = [ "wheel" "video" "audio" "networkmanager" "libvirtd" ];
     shell = pkgs.zsh;
   };
+
+  # Виртуализация
+  virtualisation.libvirtd.enable = true;
+  
 
   # Автоматический вход (можно выключить для безопасности)
   services.displayManager.autoLogin.enable = true;
