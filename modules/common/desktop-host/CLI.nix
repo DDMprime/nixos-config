@@ -3,6 +3,8 @@
 {
   environment.systemPackages = with pkgs; [
     # CLI utils
+    tmux
+    gamescope
     wget
     jq # чтобы парсить json
     ydotool # для автокликера

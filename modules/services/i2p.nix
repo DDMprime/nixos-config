@@ -43,7 +43,7 @@
           keys = "retroshare.dat";
           address = "127.0.0.1";
           port = 12346;
-          destination = "server";
+        #destination = "server";
           inbound.quantity = 1;
           inbound.length = 3;
           outbound.quantity = 1;

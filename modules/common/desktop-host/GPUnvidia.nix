@@ -5,7 +5,7 @@
     environment.systemPackages = with pkgs; [
       # GPU stuff
       nvidia-vaapi-driver # vaapi ускорение
-      vaapiVdpau # vaapi ускорение
+      libva-vdpau-driver
       libva
       libdrm
       libglvnd

@@ -1,7 +1,9 @@
 {
   programs.git = {
     enable = true;
-    userName  = "DDM_prime";
-    userEmail = "DDM_prime@proton.com";
+    settings = {
+      user.name  = "DDM_prime";
+      user.email = "DDM_prime@proton.com";
+    };
   };
 }

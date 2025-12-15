@@ -20,7 +20,7 @@
     xfce.thunar # файловый менеджер
     prismlauncher # маинкрафт лаунчер
     qbittorrent # торрент-клиент
-    mpv # видео-плеер
+    mpv-unwrapped # видео-плеер
     libreoffice-qt6-fresh # либреоффис. Аналог word'а
     tor-browser
     input-remapper # для биндов
@@ -45,5 +45,6 @@
     anki # учить слова на английском
     librewolf # firefox с вырезанной телеметрией и встроенной защитой
     hexchat # IRC мессенджер
+    itch # для игры в itch io
   ];
 }
