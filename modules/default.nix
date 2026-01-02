@@ -20,6 +20,7 @@
     ./services/tailscale.nix
     ./services/zapret.nix
     ./services/remote_access.nix
+    ./services/my_proxy.nix
     ./services/i2p.nix
     ./services/shared.nix
     ./services/zram.nix

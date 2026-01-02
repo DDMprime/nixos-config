@@ -24,17 +24,17 @@
 
     services.i2pd = {
       enable = true;
-      enableIPv4 = false;
-      enableIPv6 = true;
-      ssu = false;
-      ntcp = false;
-      address = "200:2b3e:a2dc:7f2b:b881:4c09:f9ba:f574";
-      yggdrasil.enable = true;
-      yggdrasil.address = "200:2b3e:a2dc:7f2b:b881:4c09:f9ba:f574";
-      ssu2.enable = true;
-      ssu2.published = true;
-      ntcp2.enable = true;
-      ntcp2.published = true;
+      #enableIPv4 = false;
+      #enableIPv6 = true;
+      #ssu = false;
+      #ntcp = false;
+      #address = "200:2b3e:a2dc:7f2b:b881:4c09:f9ba:f574";
+      #yggdrasil.enable = true;
+      #yggdrasil.address = "200:2b3e:a2dc:7f2b:b881:4c09:f9ba:f574";
+      #ssu2.enable = true;
+      #ssu2.published = true;
+      #ntcp2.enable = true;
+      #ntcp2.published = true;
       dataDir = "/var/lib/i2pd";
       logLevel = "debug";
       # Серверный тунель для входящих соединений
