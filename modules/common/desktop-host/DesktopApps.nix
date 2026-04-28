@@ -13,7 +13,7 @@
         "--ozone-platform=wayland"
       ];
     }) # гугл хром с поддержкой nvidia
-    #lutris # запуск игр (есть эпик геймс)
+    lutris-unwrapped # запуск игр (есть эпик геймс)
     telegram-desktop # мессенджер телеграм
     obsidian # заметки
     discord

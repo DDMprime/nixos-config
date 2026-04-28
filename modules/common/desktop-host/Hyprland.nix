@@ -41,9 +41,9 @@
       nwg-look #для удобной настройки тем gtk
       polkit_gnome #для запроса повышения прав приложения
       catppuccin # тема catppuccin
-#       catppuccin-gtk
-#       nordic # тема nord
-#       nordzy-icon-theme # адекватные иконки nord
+      catppuccin-gtk
+      nordic # тема nord
+      nordzy-icon-theme # адекватные иконки nord
     ];
   };
 }
