@@ -11,7 +11,7 @@
     nvidia.enable = true;
     input_remapper.enable = true;
     zerotier.enable = true;
-    tailscale.enable = false;
+    tailscale.enable = true;
     ssh.enable = false;
     i2p.enable = true;
     samba.enable = true;

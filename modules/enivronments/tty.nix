@@ -10,6 +10,5 @@
   config = lib.mkIf config.tty.enable {
     services.xserver.enable = false;
     services.dbus.enable = true;
- 
   };
 }

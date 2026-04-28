@@ -1,6 +1,6 @@
 {
   fileSystems."/mnt/ssd" = {
-    device = "/dev/disk/by-uuid/49ca17c9-4239-4551-a22f-f93db59252b4";
+    device = "/dev/disk/by-uuid/5bc4944b-2565-4ddf-b652-65724ad698f7";
     fsType = "ext4";
     options = [
       "nofail"

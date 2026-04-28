@@ -67,7 +67,7 @@
       systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;
     };
-    kernelPackages = pkgs.linuxPackages_latest;
+    kernelPackages = pkgs.linuxPackages_6_12; # pkgs.linuxPackages_latest;
   };
 
   #boot.kernelPackages = old-nixpkgs.legacyPackages.x86_64-linux.linuxPackages_6_12; #latest ядро, стабильное (LTS) - 6_12

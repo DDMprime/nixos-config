@@ -11,4 +11,5 @@
     pulse.enable = true;
     #jack.enable = true;
   };
+  programs.amnezia-vpn.enable = true;
 }

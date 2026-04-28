@@ -88,6 +88,23 @@
         ip46tables -t mangle -I POSTROUTING -p tcp --dport 2096 -m mark ! --mark 0x40000000/0x40000000 -j NFQUEUE --queue-num 200 --queue-bypass
         ip46tables -t mangle -I POSTROUTING -p tcp --dport 8443 -m mark ! --mark 0x40000000/0x40000000 -j NFQUEUE --queue-num 200 --queue-bypass
       ";
+
+
+      networking.firewall = {
+        enable = true;
+        allowedUDPPorts = [ 53 ];
+        allowedTCPPorts = [ 53 ];
+      };
+      # services.resolved = {
+      #   enable = false;
+      # };
+      # systemd.network.networks."zt-dns" = {
+      #   matchConfig.Name = "zt*";
+      #   networkConfig = {
+      #     DNS = [ "192.168.195.156" ];
+      #     Domains = [ "mc.zt" ];
+      #   };
+      # };
     }
   );
 }

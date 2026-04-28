@@ -10,5 +10,7 @@
     stable.python313Packages.pip
     nil # LSP сервер для .nix
     python313Packages.mutagen
+    include-what-you-use
+    gdb
   ];
 }
