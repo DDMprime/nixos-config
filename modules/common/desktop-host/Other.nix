@@ -10,6 +10,4 @@
     v4l-utils # для работы с v4l2
     flatpak # для установки пакетов с flatpak'а
   ];
-  virtualisation.lxc.enable = true; # для waydroid
-  virtualisation.waydroid.enable = true; # соответственно сам waydroid
 }

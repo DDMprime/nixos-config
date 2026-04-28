@@ -58,10 +58,9 @@
             enable = true;
             extraDiagnostics.enable = true;
             treesitter.enable = true;
-            format.type = "alejandra";
+            format.type = ["alejandra"];
             lsp = {
-              server = "nil";
-              package = pkgs.nil;
+              servers = ["nil"];
             };
           };
 
@@ -85,13 +84,13 @@
           php.enable = true;
           sql.enable = true;
           kotlin.enable = false;
-          ts.enable = false;
+          typescript.enable = false;
           go.enable = false;
           zig.enable = false;
           typst.enable = false;
           rust = {
             enable = false;
-            crates.enable = false;
+            #crates.enable = false;
           };
           assembly.enable = true;
           astro.enable = false;
@@ -107,7 +106,6 @@
           ruby.enable = false;
           fsharp.enable = false;
 
-          tailwind.enable = false;
           svelte.enable = false;
         };
 

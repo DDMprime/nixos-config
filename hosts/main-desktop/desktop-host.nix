@@ -67,12 +67,9 @@
   # Виртуализация
   virtualisation.libvirtd.enable = true;
   
-
   # Автоматический вход (можно выключить для безопасности)
   services.displayManager.autoLogin.enable = true;
   services.displayManager.autoLogin.user = UserConfig.user;
-
-  services.logind.settings.Login.KillUserProcesses = true; # Завершение всех пользовательских процессов при выключении
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -81,20 +78,11 @@
   boot.kernelPackages = pkgs.linuxPackages;
 
   boot.extraModulePackages = [ config.boot.kernelPackages.v4l2loopback ]; #для создания виртуальной камеры
-  boot.kernelModules = [ "v4l2loopback" "binder_linux" "bridge" "br_netfilter" "ip_tables" "iptable_filter" "iptable_nat" "iptable_mangle" "nf_nat" "nf_conntrack" ];
+  boot.kernelModules = [ "v4l2loopback" ];
   boot.extraModprobeConfig = ''
     options v4l2loopback devices=1 video_nr=10 card_label="OBS Virtual Camera" exclusive_caps=1
   '';
   
-  networking.firewall.trustedInterfaces = [ "waydroid0" ];
-
-  boot.kernel.sysctl = {
-    "kernel.unprivileged_userns_clone" = 1;
-    "net.ipv4.ip_forward" = 1;
-  }; # для waydroid
-
-
-
   boot.kernelParams = [ "nvidia_drm.modeset=1" ];
 
   nixpkgs.config.allowUnfree = true;

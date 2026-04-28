@@ -13,11 +13,11 @@
         "--ozone-platform=wayland"
       ];
     }) # гугл хром с поддержкой nvidia
-    lutris # запуск эпик геймса
+    #lutris # запуск игр (есть эпик геймс)
     telegram-desktop # мессенджер телеграм
     obsidian # заметки
     discord
-    xfce.thunar # файловый менеджер
+    thunar # файловый менеджер
     prismlauncher # маинкрафт лаунчер
     qbittorrent # торрент-клиент
     mpv-unwrapped # видео-плеер
@@ -32,7 +32,7 @@
     kdePackages.kate # редактор кода kate
     qview # для просмотра изображений
     stable.kdePackages.elisa # аудиоплеер
-    sayonara
+    #sayonara
     firefox # браузер
     freetube # ютуб
     stable.retroshare

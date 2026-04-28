@@ -9,8 +9,7 @@
     stable.python313 # стабильная версия python'а
     stable.python313Packages.pip
     nil # LSP сервер для .nix
-    python313Packages.mutagen
-    include-what-you-use
+    include-what-you-use # анализ #includes в C/C++
     gdb
   ];
 }

@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-    gtk = {
+    gtk.gtk4 = {
         enable = true;
         theme = {
             name = "Nordic-darker";

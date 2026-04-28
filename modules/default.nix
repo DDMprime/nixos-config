@@ -7,7 +7,6 @@
     ./enivronments/zsh.nix
     ./enivronments/neovim.nix
     ./enivronments/spicetify.nix
-    ./enivronments/hyprland_plug.nix
     ./enivronments/tty.nix
 
     #Hardware

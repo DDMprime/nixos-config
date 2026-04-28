@@ -1,5 +1,17 @@
 {
   description = "My NixOS conf";
+  
+  # nixConfig = {
+  #   substituters = [
+  #     "https://cache.nixos.org"
+  #     "https://mirrors.ustc.edu.cn/nix-channels/store"
+  #     "https://mirror.sjtu.edu.cn/nix-channels/store"
+  #     "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
+  #   ];
+  #   # extra-substituters = [ "https://nix-community.cachix.org" ];
+  #   # extra-trusted-public-keys = [ "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs=" ];
+  # };
+  # Если росмкомпозор балуется. Китайские зеркала
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -11,11 +23,6 @@
     spicetify-nix.url = "github:Gerg-L/spicetify-nix"; # кастомный спотифай
 
     hyprland.url = "github:hyprwm/Hyprland"; # окружение wayland
-    hyprland-plugins = {
-      url = "github:hyprwm/hyprland-plugins";
-      inputs.hyprland.follows = "hyprland";
-    };
-
     niri-unstable.url = "github:YaLTeR/niri";
     niri = {
       url = "github:sodiboo/niri-flake";

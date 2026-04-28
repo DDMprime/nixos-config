@@ -9,14 +9,14 @@
     zapret.enable = true;
     zsh.enable = true;
     nvidia.enable = true;
-    input_remapper.enable = true;
+    input_remapper.enable = false;
     zerotier.enable = true;
-    tailscale.enable = true;
+    tailscale.enable = false;
     ssh.enable = false;
-    i2p.enable = true;
-    samba.enable = true;
+    i2p.enable = false;
+    samba.enable = false;
     steam.enable = true;
     swapfile.enable = true;
-    spicetify.enable = true;
+    spicetify.enable = false;
   };
 }

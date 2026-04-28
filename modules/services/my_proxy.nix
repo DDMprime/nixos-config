@@ -4,7 +4,7 @@
   environment.systemPackages = [ pkgs.gost ];
 
   systemd.services.gost-tor = {
-    description = "SOCKS5 proxy -> Tor";
+    description = "SOCKS5 proxy для Tor";
     after = [ "network.target" "tor.service" ];
     wantedBy = [ "multi-user.target" ];
 
