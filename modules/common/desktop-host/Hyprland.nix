@@ -28,6 +28,7 @@
       zsh-syntax-highlighting
       playerctl # отображение звука на waybar
       quickshell
+      hyprsession # ПЛАГИН для сохранения сессий
       #eww
 
       # Настройки GTK/QT

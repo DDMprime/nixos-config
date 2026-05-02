@@ -9,7 +9,7 @@
     zapret.enable = true;
     zsh.enable = true;
     nvidia.enable = true;
-    input_remapper.enable = false;
+    input_remapper.enable = true;
     zerotier.enable = true;
     tailscale.enable = false;
     ssh.enable = false;

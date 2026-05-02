@@ -22,6 +22,8 @@
 
     spicetify-nix.url = "github:Gerg-L/spicetify-nix"; # кастомный спотифай
 
+    hyprsession.url = "github:joshurtree/hyprsession"; # сохранение сессии в hyprland
+
     hyprland.url = "github:hyprwm/Hyprland"; # окружение wayland
     niri-unstable.url = "github:YaLTeR/niri";
     niri = {
@@ -35,7 +37,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, nvf, spicetify-nix, ...}@inputs:
+  outputs = { self, nixpkgs, home-manager, nvf, spicetify-nix, hyprsession, ...}@inputs:
     let
       Config = import ./hosts/main-desktop/user_config.nix;
       UserConfig = Config;
