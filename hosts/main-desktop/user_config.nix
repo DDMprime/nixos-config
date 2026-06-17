@@ -13,7 +13,7 @@
     zerotier.enable = true;
     tailscale.enable = false;
     ssh.enable = false;
-    i2p.enable = false;
+    i2p.enable = true;
     samba.enable = false;
     steam.enable = true;
     swapfile.enable = true;

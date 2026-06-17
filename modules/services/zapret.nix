@@ -61,7 +61,10 @@
           "--filter-tcp=2053,2083,2087,2096,8443 --hostlist-domains=discord.media --dpi-desync=hostfakesplit --dpi-desync-repeats=4 --dpi-desync-fooling=ts --dpi-desync-hostfakesplit-mod=host=ozon.ru --new"
 
           # Google Services (youtube) (TCP 443)
-          "--filter-tcp=443 --hostlist=/zapret/lists/list-google.txt --dpi-desync=fakedsplit --dpi-desync-fooling=badseq --dpi-desync-badseq-increment=0 --dpi-desync-split-pos=method+2 --new"
+          "--filter-tcp=443 --hostlist=/zapret/lists/list-google.txt --dpi-desync=fake,multisplit --dpi-desync-fake-tls=0x00000000 --dpi-desync-fake-tls=! --dpi-desync-split-pos=1,midsld --dpi-desync-repeats=2 --dpi-desync-fooling=badseq --dpi-desync-fake-tls-mod=rnd,dupsid,sni=www.google.com --new"
+
+          "--filter-tcp=443 --hostlist=/zapret/lists/yt-video.txt --dpi-desync=hostfakesplit --dpi-desync-fooling=ts --dpi-desync-hostfakesplit-mod=host=www.google.com --new"
+
 
           # General TCP (80, 443)
           "--filter-tcp=80,443 --hostlist=${LIST_PATH} --dpi-desync=hostfakesplit --dpi-desync-repeats=4 --dpi-desync-fooling=ts,md5sig --dpi-desync-hostfakesplit-mod=host=ozon.ru --new"
@@ -90,11 +93,11 @@
       ";
 
 
-      networking.firewall = {
-        enable = true;
-        allowedUDPPorts = [ 53 ];
-        allowedTCPPorts = [ 53 ];
-      };
+      # networking.firewall = {
+      #   enable = true;
+      #   allowedUDPPorts = [ 53 ];
+      #   allowedTCPPorts = [ 53 ];
+      # };
       # services.resolved = {
       #   enable = false;
       # };

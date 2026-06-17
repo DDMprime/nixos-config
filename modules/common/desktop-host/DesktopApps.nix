@@ -18,7 +18,7 @@
     obsidian # заметки
     discord
     thunar # файловый менеджер
-    prismlauncher # маинкрафт лаунчер
+    #prismlauncher # маинкрафт лаунчер
     qbittorrent # торрент-клиент
     mpv-unwrapped # видео-плеер
     libreoffice-qt6-fresh # либреоффис. Аналог word'а

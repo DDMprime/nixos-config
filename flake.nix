@@ -1,16 +1,16 @@
 {
   description = "My NixOS conf";
   
-  nixConfig = {
-    substituters = [
-      "https://cache.nixos.org"
-      "https://mirrors.ustc.edu.cn/nix-channels/store"
-      "https://mirror.sjtu.edu.cn/nix-channels/store"
-      "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
-    ];
-    # extra-substituters = [ "https://nix-community.cachix.org" ];
-    # extra-trusted-public-keys = [ "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs=" ];
-  };
+  # nixConfig = {
+  #   substituters = [
+  #     "https://cache.nixos.org"
+  #     "https://mirrors.ustc.edu.cn/nix-channels/store"
+  #     "https://mirror.sjtu.edu.cn/nix-channels/store"
+  #     "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
+  #   ];
+  #   # extra-substituters = [ "https://nix-community.cachix.org" ];
+  #   # extra-trusted-public-keys = [ "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs=" ];
+  # };
   # Если росмкомпозор балуется. Китайские зеркала
 
   inputs = {
@@ -21,8 +21,6 @@
     nvf.url = "github:notashelf/nvf"; # neovim настройка
 
     spicetify-nix.url = "github:Gerg-L/spicetify-nix"; # кастомный спотифай
-
-    hyprsession.url = "github:joshurtree/hyprsession"; # сохранение сессии в hyprland
 
     hyprland.url = "github:hyprwm/Hyprland"; # окружение wayland
     niri-unstable.url = "github:YaLTeR/niri";
@@ -35,9 +33,13 @@
       url = "github:nix-community/home-manager"; #release-24.11 stable
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    prismlauncher-cracked = {
+      url = "github:Diegiwg/PrismLauncher-Cracked";
+      inputs.nixpkgs.follows = "nixpkgs";  
+    }; # патченный маинкрафт лаунчер
   };
 
-  outputs = { self, nixpkgs, home-manager, nvf, spicetify-nix, hyprsession, ...}@inputs:
+  outputs = { self, nixpkgs, home-manager, nvf, spicetify-nix, prismlauncher-cracked, ...}@inputs:
     let
       Config = import ./hosts/main-desktop/user_config.nix;
       UserConfig = Config;

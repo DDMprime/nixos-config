@@ -11,7 +11,7 @@
 
     services.zerotierone = {
         enable = true;
-        joinNetworks = [ "363c67c55aec434b" ]; # ID сети zerotier
+        joinNetworks = [ "363c67c55aaaf9a9" ]; # ID сети zerotier
     };
     networking.firewall = {
         trustedInterfaces = [ "zt*" ];  # Разрешить весь трафик ZeroTier

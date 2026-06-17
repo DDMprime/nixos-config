@@ -72,7 +72,45 @@
           auth = false;
           strictHeaders = false;
       };
-
+      outTunnels.acetone-irc = {
+        enable = true;
+        destination = "irc.acetone.i2p";
+        address = "127.0.0.1";
+        port = 6667;
+        destinationPort = 6667;
+        keys = "acetone-irc.dat";
+      };
+    };
+    services.znc = {
+      enable = true;
+      openFirewall = true;
+      mutable = true;
+      useLegacyConfig = false;
+      dataDir = "/znc";
+      user = UserConfig.user;
+      group = "users";
+      config = {
+        LoadModule = [ "webadmin" "adminlog" "log" ];
+        User.paul = {
+          Admin = true;
+          Nick = "paul";
+          AltNick = "paul11";
+          LoadModule = [ "chansaver" "controlpanel" ];
+          Network.acetone = {
+            Server = "127.0.0.1";
+            Port = "6667";
+            LoadModule = [ "simple_away" "log" ];
+            Chan = {
+              "#ru" = { Detached = false; };
+            };
+          };
+          Pass.password = {
+            Method = "sha256";
+            Hash = "02cf27c463e231e31671bb2e39571489a2042badbe713fa6b34c637bd861b1e2";
+            Salt = "PGw0j!,6wrRYYF-!5uo1";
+          };
+        };
+      };
     };
   };
 }
