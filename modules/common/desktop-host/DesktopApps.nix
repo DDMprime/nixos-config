@@ -46,5 +46,6 @@
     librewolf # firefox с вырезанной телеметрией и встроенной защитой
     hexchat # IRC мессенджер
     itch # для игры в itch io
+    prismlauncher-cracked # патченный маинкрафт лаунчер
   ];
 }

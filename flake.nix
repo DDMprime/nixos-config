@@ -53,6 +53,11 @@
         specialArgs = {inherit inputs UserConfig;};
         modules = [
           ./overlays
+          (final: prev: {
+            steam-run = prev.steam-run.override {
+              extraPkgs = pkgs: [ pkgs.noto-fonts ];
+            };
+          })
           ChooseSystem.PathToMainFile
           nvf.nixosModules.default
           inputs.spicetify-nix.nixosModules.default
