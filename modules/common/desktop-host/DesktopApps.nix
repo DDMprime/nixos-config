@@ -29,9 +29,9 @@
     qtox # для общения
     obs-studio # захват экрана
     vesktop #клиент дискорда с vencord'ом
-    #kdePackages.kate # редактор кода kate
+    kdePackages.kate # редактор кода kate
     qview # для просмотра изображений
-    #stable.kdePackages.elisa # аудиоплеер
+    stable.kdePackages.elisa # аудиоплеер
     #sayonara
     firefox # браузер
     freetube # ютуб
