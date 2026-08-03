@@ -29,9 +29,9 @@
     qtox # для общения
     obs-studio # захват экрана
     vesktop #клиент дискорда с vencord'ом
-    kdePackages.kate # редактор кода kate
+    #kdePackages.kate # редактор кода kate
     qview # для просмотра изображений
-    stable.kdePackages.elisa # аудиоплеер
+    #stable.kdePackages.elisa # аудиоплеер
     #sayonara
     firefox # браузер
     freetube # ютуб
@@ -42,10 +42,9 @@
     inkscape # для создания векторного видео
     keepassxc # менеджер паролей
     xarchiver # универсальный архиватор
-    anki # учить слова на английском
+    #anki # учить слова на английском
     librewolf # firefox с вырезанной телеметрией и встроенной защитой
-    hexchat # IRC мессенджер
     itch # для игры в itch io
-    prismlauncher-cracked # патченный маинкрафт лаунчер
+    #prismlauncher-cracked # патченный маинкрафт лаунчер
   ];
 }
