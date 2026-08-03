@@ -28,6 +28,19 @@
   networking = {
     hostName = "nixos";
     networkmanager.enable = true;
+    interfaces.eno1 = { #для подключения напрямую к серверу без роутера
+      ipv4.addresses = [
+        {
+          address = "192.168.100.1";
+          prefixLength = 24;
+        }
+      ];
+    };
+    nat = { # nat для проброса интернета на сервер
+      enable = true;
+      externalInterface = "enp4s0";   # Интернет
+      internalInterfaces = [ "eno1" ]; # Кабель к серверу
+    };
   };
 
   time.timeZone = "Asia/Yekaterinburg";
@@ -82,6 +95,8 @@
   boot.extraModprobeConfig = ''
     options v4l2loopback devices=1 video_nr=10 card_label="OBS Virtual Camera" exclusive_caps=1
   '';
+
+  boot.kernel.sysctl."net.ipv4.ip_forward" = 1; # для проброса интернета к серверу
   
   boot.kernelParams = [ "nvidia_drm.modeset=1" ];
 
