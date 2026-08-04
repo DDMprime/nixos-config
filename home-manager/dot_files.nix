@@ -20,10 +20,6 @@
         source = ./dotfiles/fzf_dirs.txt;
         recursive = true;
       };
-      home.file.".config/zapret" = {
-        source = ./dotfiles/zapret;
-        recursive = true;
-      };
     }
 
     #Hyprland
