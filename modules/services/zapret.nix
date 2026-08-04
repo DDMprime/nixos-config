@@ -28,28 +28,6 @@
         ];
 
         blacklist = [ "search.nixos.org" ];
-
-#         params = [
-#           "--filter-udp=443 --hostlist=${LIST_PATH} --dpi-desync=fake --dpi-desync-repeats=6 --dpi-desync-fake-quic=/zapret/fake/quic_initial_www_google_com.bin --new"
-#           "--filter-udp=50000-50100 --ipset=${DISCORD_IPSET_PATH} --dpi-desync=fake --dpi-desync-any-protocol --dpi-desync-cutoff=d3 --dpi-desync-repeats=6 --new"
-#           "--filter-tcp=80 --hostlist=${LIST_PATH} --dpi-desync=fake,split2 --dpi-desync-autottl=2 --dpi-desync-fooling=md5sig --new"
-#           "--filter-tcp=443 --hostlist=${LIST_PATH} --dpi-desync=split2 --dpi-desync-split-seqovl=652 --dpi-desync-split-pos=2 --dpi-desync-split-seqovl-pattern=/zapret/fake/tls_clienthello_www_google_com.bin --new"
-#           "--filter-udp=443 --ipset=${CLOUDFLARE_IPSET_PATH} --dpi-desync=fake --dpi-desync-repeats=6 --dpi-desync-fake-quic=/zapret/fake/quic_initial_www_google_com.bin --new"
-#           "--filter-tcp=80 --ipset=${CLOUDFLARE_IPSET_PATH} --dpi-desync=fake,split2 --dpi-desync-autottl=2 --dpi-desync-fooling=md5sig --new"
-#           "--filter-tcp=443 --ipset=${CLOUDFLARE_IPSET_PATH} --dpi-desync=split2 --dpi-desync-split-seqovl=652 --dpi-desync-split-pos=2 --dpi-desync-split-seqovl-pattern=/zapret/fake/tls_clienthello_www_google_com.bin"
-#         ];
-        # params = [
-        #   "--filter-udp=443 --hostlist=${LIST_PATH} --dpi-desync=fake --dpi-desync-repeats=6 --dpi-desync-fake-quic=/zapret/fake/quic_initial_www_google_com.bin --new"
-        #   "--filter-udp=50000-50100 --filter-l7=discord,stun --dpi-desync=fake --dpi-desync-repeats=6 --new"
-        #   "--filter-tcp=80 --hostlist=${LIST_PATH} --dpi-desync=fake,multisplit --dpi-desync-autottl=2 --dpi-desync-fooling=md5sig --new"
-        #   "--filter-tcp=443 --hostlist=${LIST_PATH} --dpi-desync=multisplit --dpi-desync-split-seqovl=652 --dpi-desync-split-pos=2 --dpi-desync-split-seqovl-pattern=/zapret/fake/tls_clienthello_www_google_com.bin --new"
-        #   "--filter-udp=443 --ipset=${ALL_IPSET} --dpi-desync=fake --dpi-desync-repeats=6 --dpi-desync-fake-quic=/zapret/fake/quic_initial_www_google_com.bin --new"
-        #   "--filter-tcp=80 --ipset=${ALL_IPSET} --dpi-desync=fake,multisplit --dpi-desync-autottl=2 --dpi-desync-fooling=md5sig --new"
-        #   "--filter-tcp=443,1024-65535 --ipset=${ALL_IPSET} --dpi-desync=multisplit --dpi-desync-split-seqovl=652 --dpi-desync-split-pos=2 --dpi-desync-split-seqovl-pattern=/zapret/fake/tls_clienthello_www_google_com.bin --new" # game filter
-        #   "--filter-udp=1024-65535 --ipset=${ALL_IPSET} --dpi-desync=fake --dpi-desync-autottl=2 --dpi-desync-repeats=12 --dpi-desync-any-protocol=1 --dpi-desync-fake-unknown-udp=/zapret/fake/quic_initial_www_google_com.bin --dpi-desync-cutoff=n2 --new" # game filter
-        #   "--filter-tcp=443 --hostlist-domains=itch.io,img.itch.zone,html-classic.itch.zone --dpi-desync=fake,fakedsplit --dpi-desync-fake-tls-mod=sni=none --dpi-desync-split-seqovl=681 --dpi-desync-fooling=badseq --dpi-desync-badseq-increment=7000 --new"
-        #   "--filter-tcp=6695-6710 --dpi-desync=fake,split2 --dpi-desync-repeats=8 --dpi-desync-fooling=md5sig --dpi-desync-autottl=2 --dpi-desync-fake-tls=/zapret/fake/tls_clienthello_www_google_com.bin"
-        # ];
         params = [
         # UDP 443 - General Hostlist
           "--filter-udp=443 --hostlist=${LIST_PATH} --dpi-desync=fake --dpi-desync-repeats=6 --dpi-desync-fake-quic=/zapret/fake/quic_initial_www_google_com.bin --new"
@@ -91,23 +69,7 @@
         ip46tables -t mangle -I POSTROUTING -p tcp --dport 2096 -m mark ! --mark 0x40000000/0x40000000 -j NFQUEUE --queue-num 200 --queue-bypass
         ip46tables -t mangle -I POSTROUTING -p tcp --dport 8443 -m mark ! --mark 0x40000000/0x40000000 -j NFQUEUE --queue-num 200 --queue-bypass
       ";
-
-
-      # networking.firewall = {
-      #   enable = true;
-      #   allowedUDPPorts = [ 53 ];
-      #   allowedTCPPorts = [ 53 ];
-      # };
-      # services.resolved = {
-      #   enable = false;
-      # };
-      # systemd.network.networks."zt-dns" = {
-      #   matchConfig.Name = "zt*";
-      #   networkConfig = {
-      #     DNS = [ "192.168.195.156" ];
-      #     Domains = [ "mc.zt" ];
-      #   };
-      # };
+    
     }
   );
 }
