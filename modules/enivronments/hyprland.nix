@@ -18,6 +18,7 @@
 
       displayManager = {
         sddm.enable = false;
+        defaultSession = "hyprland-uwsm";
         autoLogin = {
           enable = true;
           user = UserConfig.user;
@@ -47,8 +48,9 @@
     programs.hyprland = {
       enable = true;
       xwayland.enable = true; # Для X11-приложений
-      package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
-      portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+      withUWSM = true; #Universal Wayland Session Manager, решает проблемы с порталами
+      #package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+      #portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
     };
   };
 }

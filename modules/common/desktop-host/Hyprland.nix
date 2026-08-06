@@ -5,7 +5,7 @@
     environment.systemPackages = with pkgs; [
       # WM stuff
       #old-pkgs.hyprland # окружение
-      xdg-desktop-portal
+      stable.xdg-desktop-portal
       xdg-desktop-portal-hyprland
       xdg-desktop-portal-gtk
       xdg-user-dirs

@@ -22,7 +22,7 @@
 
     spicetify-nix.url = "github:Gerg-L/spicetify-nix"; # кастомный спотифай
 
-    hyprland.url = "github:hyprwm/Hyprland"; # окружение wayland
+    #hyprland.url = "github:hyprwm/Hyprland"; # окружение wayland
     niri-unstable.url = "github:YaLTeR/niri";
     niri = {
       url = "github:sodiboo/niri-flake";
