@@ -3,6 +3,7 @@
 {
   environment.systemPackages = with pkgs; [
     # CLI utils
+    wine
     tmux
     gamescope
     wget

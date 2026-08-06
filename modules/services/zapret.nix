@@ -36,7 +36,7 @@
           "--filter-udp=19294-19344,50000-50100 --filter-l7=discord,stun --dpi-desync=fake --dpi-desync-fake-discord=/zapret/fake/quic_initial_www_google_com.bin --dpi-desync-fake-stun=/zapret/fake/quic_initial_www_google_com.bin --dpi-desync-repeats=6 --new"
 
           # Discord TCP (Media/Image Servers)
-          "--filter-tcp=2053,2083,2087,2096,8443 --hostlist-domains=discord.media --dpi-desync=hostfakesplit --dpi-desync-repeats=4 --dpi-desync-fooling=ts --dpi-desync-hostfakesplit-mod=host=ozon.ru --new"
+          "--filter-tcp=2053,2083,2087,2096,8443 --hostlist-domains=discord.media --dpi-desync=fake,fakedsplit --dpi-desync-repeats=6 --dpi-desync-fooling=ts --dpi-desync-fakedsplit-pattern=0x00 --dpi-desync-fake-quic=/zapret/fake/quic_initial_www_google_com.bin --new"
 
           # Google Services (youtube) (TCP 443)
           "--filter-tcp=443 --hostlist=/zapret/lists/list-google.txt --dpi-desync=fake,multisplit --dpi-desync-fake-tls=0x00000000 --dpi-desync-fake-tls=! --dpi-desync-split-pos=1,midsld --dpi-desync-repeats=2 --dpi-desync-fooling=badseq --dpi-desync-fake-tls-mod=rnd,dupsid,sni=www.google.com --new"
